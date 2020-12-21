@@ -12,21 +12,29 @@ import com.getcapacitor.PluginMethod;
 @NativePlugin
 public final class Stockfish extends Plugin {
 
+  private static final String EVENT_OUTPUT = "stockfishOutput";
+
   private boolean isInit = false;
 
   static {
     System.loadLibrary("stockfish-jni");
   }
 
+  // JNI
   public native void jniInit(long memorySize);
   public native void jniExit();
   public native void jniCmd(String cmd);
+  public void onMessage(byte[] b) {
+    String output = new String(b);
+    notifyListeners(EVENT_OUTPUT, output);
+  }
+  // end JNI
 
   @PluginMethod
   public void init(PluginCall call) {
     if (!isInit) {
       // Get total device RAM for hashtable sizing
-      Context context = this.getContext();
+      Context context = getContext();
       ActivityManager actManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
       ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
       actManager.getMemoryInfo(memInfo);

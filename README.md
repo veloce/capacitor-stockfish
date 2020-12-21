@@ -1,1 +1,1 @@
-# capacitor-stockfish
+# Capacitor Stockfish plugin

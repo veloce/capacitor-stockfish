@@ -15,7 +15,7 @@
     "prepublishOnly": "npm run build"
   },
   "author": "Vincent Velociter",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "devDependencies": {
     "@capacitor/android": "^2.4.5",
     "@capacitor/core": "^2.4.5",

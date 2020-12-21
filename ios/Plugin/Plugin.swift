@@ -1,17 +1,25 @@
 import Foundation
 import Capacitor
 
-/**
- * Please read the Capacitor iOS Plugin Development Guide
- * here: https://capacitorjs.com/docs/plugins/ios
- */
 @objc(Stockfish)
 public class Stockfish: CAPPlugin {
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.success([
-            "value": value
-        ])
+    var isInit = false
+
+    @objc func start(_ call: CAPPluginCall) {
+        isInit = true
+        call.success()
+    }
+
+    @objc func cmd(_ call: CAPPluginCall) {
+        if (isInit) {
+            guard let cmd = call.options["cmd"] as? String else {
+                call.reject("Must provide a cmd")
+                return
+            }
+            call.resolve()
+        } else {
+            call.reject("You must call start before anything else")
+        }
     }
 }

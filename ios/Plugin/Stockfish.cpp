@@ -1,13 +1,13 @@
 #include <iostream>
-#include "../../stockfish/src/bitboard.h"
-#include "../../stockfish/src/endgame.h"
-#include "../../stockfish/src/position.h"
-#include "../../stockfish/src/search.h"
-#include "../../stockfish/src/thread.h"
-#include "../../stockfish/src/tt.h"
-#include "../../stockfish/src/uci.h"
-#include "../../stockfish/src/syzygy/tbprobe.h"
-#include "../../lib/threadbuf.h"
+#include "stockfish/bitboard.h"
+#include "stockfish/endgame.h"
+#include "stockfish/position.h"
+#include "stockfish/search.h"
+#include "stockfish/thread.h"
+#include "stockfish/tt.h"
+#include "stockfish/uci.h"
+#include "stockfish/syzygy/tbprobe.h"
+#include "threadbuf.h"
 
 #include "Stockfish.hpp"
 

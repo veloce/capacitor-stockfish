@@ -3,8 +3,7 @@
 
 #include <string>
 
-namespace CapacitorStockfish
-{
+namespace CapacitorStockfish {
 void init(void *stockfish);
 void cmd(std::string cmd);
 void exit();

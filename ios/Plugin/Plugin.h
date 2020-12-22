@@ -1,4 +1,5 @@
 #import <UIKit/UIKit.h>
+#import <Plugin/StockfishBridge.h>
 
 //! Project version number for Plugin.
 FOUNDATION_EXPORT double PluginVersionNumber;

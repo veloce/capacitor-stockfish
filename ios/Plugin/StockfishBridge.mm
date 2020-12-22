@@ -1,6 +1,4 @@
-
-#import <Foundation/Foundation.h>
-
+#include <string>
 #import "StockfishBridge.h"
 #import "Stockfish.hpp"
 

@@ -1,4 +1,4 @@
-#include "../../lib/threadbuf.h"
+#include <iostream>
 #include "../../stockfish/src/bitboard.h"
 #include "../../stockfish/src/endgame.h"
 #include "../../stockfish/src/position.h"
@@ -6,9 +6,10 @@
 #include "../../stockfish/src/thread.h"
 #include "../../stockfish/src/tt.h"
 #include "../../stockfish/src/uci.h"
+#include "../../stockfish/src/syzygy/tbprobe.h"
+#include "../../lib/threadbuf.h"
 
 #include "Stockfish.hpp"
-
 
 namespace PSQT {
   void init();
@@ -57,10 +58,12 @@ namespace CapacitorStockfish
     Position::init();
     Bitbases::init();
     Endgames::init();
-    Threads.set(Options["Threads"]);
+    Threads.set(size_t(Options["Threads"]));
+    Search::clear(); // After threads are up
 #ifdef USE_NNUE
     Eval::NNUE::init();
 #endif
+
   }
 
   void cmd(std::string cmd) {
@@ -73,3 +76,4 @@ namespace CapacitorStockfish
     Threads.set(0);
   }
 }
+

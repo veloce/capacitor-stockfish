@@ -4,9 +4,11 @@ import Capacitor
 @objc(Stockfish)
 public class Stockfish: CAPPlugin {
 
+    let stockfish = StockfishBridge()
     var isInit = false
 
     @objc func start(_ call: CAPPluginCall) {
+        stockfish.start()
         isInit = true
         call.success()
     }
@@ -17,6 +19,7 @@ public class Stockfish: CAPPlugin {
                 call.reject("Must provide a cmd")
                 return
             }
+            stockfish.cmd(cmd)
             call.resolve()
         } else {
             call.reject("You must call start before anything else")

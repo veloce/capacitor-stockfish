@@ -13,8 +13,7 @@
 		50ADFF97201F53D600D50D53 /* PluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADFF96201F53D600D50D53 /* PluginTests.swift */; };
 		50ADFF99201F53D600D50D53 /* Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 50ADFF8B201F53D600D50D53 /* Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50ADFFA42020D75100D50D53 /* Capacitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADFFA52020D75100D50D53 /* Capacitor.framework */; };
-		50ADFFA82020EE4F00D50D53 /* Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ADFFA72020EE4F00D50D53 /* Plugin.m */; };
-		50E1A94820377CB70090CE1A /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1A94720377CB70090CE1A /* Plugin.swift */; };
+		50ADFFA82020EE4F00D50D53 /* Plugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 50ADFFA72020EE4F00D50D53 /* Plugin.mm */; };
 		962E320D25924CED004FDF57 /* threadbuf.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E320C25924CED004FDF57 /* threadbuf.h */; };
 		962E344325929E12004FDF57 /* Copying.txt in Resources */ = {isa = PBXBuildFile; fileRef = 962E33F825929E12004FDF57 /* Copying.txt */; };
 		962E344425929E12004FDF57 /* AUTHORS in Resources */ = {isa = PBXBuildFile; fileRef = 962E33F925929E12004FDF57 /* AUTHORS */; };
@@ -76,10 +75,8 @@
 		962E348425929E13004FDF57 /* uci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E344125929E12004FDF57 /* uci.cpp */; };
 		962E348525929E13004FDF57 /* endgame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E344225929E12004FDF57 /* endgame.cpp */; };
 		962E34CB259359D4004FDF57 /* StockfishSendOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E34CA259359D4004FDF57 /* StockfishSendOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		96A9B7FE2591662700389888 /* StockfishBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 96A9B7FD2591662700389888 /* StockfishBridge.mm */; };
 		96A9B8052591EE5C00389888 /* Stockfish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96A9B8032591EE5C00389888 /* Stockfish.cpp */; };
 		96A9B8062591EE5C00389888 /* Stockfish.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 96A9B8042591EE5C00389888 /* Stockfish.hpp */; };
-		96A9B8392591F9C300389888 /* StockfishBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A9B7FC2591652100389888 /* StockfishBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +98,7 @@
 		50ADFF96201F53D600D50D53 /* PluginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginTests.swift; sourceTree = "<group>"; };
 		50ADFF98201F53D600D50D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50ADFFA52020D75100D50D53 /* Capacitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capacitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		50ADFFA72020EE4F00D50D53 /* Plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Plugin.m; sourceTree = "<group>"; };
-		50E1A94720377CB70090CE1A /* Plugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
+		50ADFFA72020EE4F00D50D53 /* Plugin.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Plugin.mm; sourceTree = "<group>"; };
 		5E23F77F099397094342571A /* Pods-Plugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plugin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plugin/Pods-Plugin.debug.xcconfig"; sourceTree = "<group>"; };
 		91781294A431A2A7CC6EB714 /* Pods-Plugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plugin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plugin/Pods-Plugin.release.xcconfig"; sourceTree = "<group>"; };
 		962E320C25924CED004FDF57 /* threadbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = threadbuf.h; path = ../../lib/threadbuf.h; sourceTree = "<group>"; };
@@ -173,8 +169,6 @@
 		962E344225929E12004FDF57 /* endgame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = endgame.cpp; sourceTree = "<group>"; };
 		962E34AC25934492004FDF57 /* nn-82215d0fd0df.nnue */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nn-82215d0fd0df.nnue"; sourceTree = "<group>"; };
 		962E34CA259359D4004FDF57 /* StockfishSendOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockfishSendOutput.h; sourceTree = "<group>"; };
-		96A9B7FC2591652100389888 /* StockfishBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockfishBridge.h; sourceTree = "<group>"; };
-		96A9B7FD2591662700389888 /* StockfishBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = StockfishBridge.mm; sourceTree = "<group>"; };
 		96A9B8032591EE5C00389888 /* Stockfish.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stockfish.cpp; sourceTree = "<group>"; };
 		96A9B8042591EE5C00389888 /* Stockfish.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stockfish.hpp; sourceTree = "<group>"; };
 		96ED1B6440D6672E406C8D19 /* Pods-PluginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PluginTests/Pods-PluginTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -229,12 +223,9 @@
 			children = (
 				962E33F725929E12004FDF57 /* stockfish */,
 				962E320C25924CED004FDF57 /* threadbuf.h */,
-				50E1A94720377CB70090CE1A /* Plugin.swift */,
 				50ADFF8B201F53D600D50D53 /* Plugin.h */,
-				50ADFFA72020EE4F00D50D53 /* Plugin.m */,
+				50ADFFA72020EE4F00D50D53 /* Plugin.mm */,
 				50ADFF8C201F53D600D50D53 /* Info.plist */,
-				96A9B7FC2591652100389888 /* StockfishBridge.h */,
-				96A9B7FD2591662700389888 /* StockfishBridge.mm */,
 				96A9B8032591EE5C00389888 /* Stockfish.cpp */,
 				96A9B8042591EE5C00389888 /* Stockfish.hpp */,
 				962E34CA259359D4004FDF57 /* StockfishSendOutput.h */,
@@ -423,7 +414,6 @@
 				962E347225929E13004FDF57 /* movegen.h in Headers */,
 				50ADFF99201F53D600D50D53 /* Plugin.h in Headers */,
 				962E348025929E13004FDF57 /* uci.h in Headers */,
-				96A9B8392591F9C300389888 /* StockfishBridge.h in Headers */,
 				962E347625929E13004FDF57 /* evaluate.h in Headers */,
 				962E347125929E13004FDF57 /* thread.h in Headers */,
 				962E346E25929E12004FDF57 /* tbprobe.h in Headers */,
@@ -636,10 +626,9 @@
 				962E347C25929E13004FDF57 /* tt.cpp in Sources */,
 				962E347325929E13004FDF57 /* search.cpp in Sources */,
 				962E347825929E13004FDF57 /* movegen.cpp in Sources */,
-				50E1A94820377CB70090CE1A /* Plugin.swift in Sources */,
 				962E346B25929E12004FDF57 /* tune.cpp in Sources */,
 				962E346125929E12004FDF57 /* misc.cpp in Sources */,
-				50ADFFA82020EE4F00D50D53 /* Plugin.m in Sources */,
+				50ADFFA82020EE4F00D50D53 /* Plugin.mm in Sources */,
 				962E348325929E13004FDF57 /* position.cpp in Sources */,
 				962E348425929E13004FDF57 /* uci.cpp in Sources */,
 				962E346D25929E12004FDF57 /* tbprobe.cpp in Sources */,
@@ -647,7 +636,6 @@
 				962E347025929E12004FDF57 /* evaluate.cpp in Sources */,
 				962E344F25929E12004FDF57 /* timeman.cpp in Sources */,
 				962E346825929E12004FDF57 /* benchmark.cpp in Sources */,
-				96A9B7FE2591662700389888 /* StockfishBridge.mm in Sources */,
 				962E345125929E12004FDF57 /* evaluate_nnue.cpp in Sources */,
 				962E345A25929E12004FDF57 /* half_kp.cpp in Sources */,
 				962E344E25929E12004FDF57 /* thread.cpp in Sources */,
@@ -857,7 +845,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 96ED1B6440D6672E406C8D19 /* Pods-PluginTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PluginTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -872,7 +859,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F65BB2953ECE002E1EF3E424 /* Pods-PluginTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PluginTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

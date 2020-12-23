@@ -11,4 +11,18 @@
 - (void) cmd: (NSString*)command {
     CapacitorStockfish::cmd(std::string([command UTF8String]));
 }
+
+- (void) exit {
+    CapacitorStockfish::exit();
+}
+
+- (void) notifyListeners: (NSString*)output {
+    // todo
+}
+
+void StockfishSendOutput (void *bridge, const char *output)
+{
+  [(__bridge id) bridge notifyListeners:[NSString stringWithUTF8String:output]];
+}
+
 @end

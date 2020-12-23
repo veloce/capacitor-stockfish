@@ -3,6 +3,8 @@ import Capacitor
 
 @objc(Stockfish)
 public class Stockfish: CAPPlugin {
+    
+    let EVENT_OUTPUT = "stockfishOutput"
 
     let stockfish = StockfishBridge()
     var isInit = false
@@ -24,5 +26,14 @@ public class Stockfish: CAPPlugin {
         } else {
             call.reject("You must call start before anything else")
         }
+    }
+    
+    @objc func exit(_ call: CAPPluginCall) {
+        if (isInit) {
+            stockfish.cmd("quit")
+            stockfish.exit()
+            isInit = false
+        }
+        call.success()
     }
 }

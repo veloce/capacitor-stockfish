@@ -44,7 +44,6 @@
 		962E346225929E12004FDF57 /* tune.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E341D25929E12004FDF57 /* tune.h */; };
 		962E346325929E12004FDF57 /* misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E341E25929E12004FDF57 /* misc.h */; };
 		962E346425929E12004FDF57 /* bitboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E341F25929E12004FDF57 /* bitboard.cpp */; };
-		962E346525929E12004FDF57 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 962E342025929E12004FDF57 /* Makefile */; };
 		962E346625929E12004FDF57 /* material.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E342125929E12004FDF57 /* material.h */; };
 		962E346725929E12004FDF57 /* psqt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E342225929E12004FDF57 /* psqt.cpp */; };
 		962E346825929E12004FDF57 /* benchmark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E342325929E12004FDF57 /* benchmark.cpp */; };
@@ -76,6 +75,7 @@
 		962E348325929E13004FDF57 /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E344025929E12004FDF57 /* position.cpp */; };
 		962E348425929E13004FDF57 /* uci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E344125929E12004FDF57 /* uci.cpp */; };
 		962E348525929E13004FDF57 /* endgame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E344225929E12004FDF57 /* endgame.cpp */; };
+		962E34CB259359D4004FDF57 /* StockfishSendOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E34CA259359D4004FDF57 /* StockfishSendOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96A9B7FE2591662700389888 /* StockfishBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 96A9B7FD2591662700389888 /* StockfishBridge.mm */; };
 		96A9B8052591EE5C00389888 /* Stockfish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96A9B8032591EE5C00389888 /* Stockfish.cpp */; };
 		96A9B8062591EE5C00389888 /* Stockfish.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 96A9B8042591EE5C00389888 /* Stockfish.hpp */; };
@@ -140,7 +140,6 @@
 		962E341D25929E12004FDF57 /* tune.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tune.h; sourceTree = "<group>"; };
 		962E341E25929E12004FDF57 /* misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = misc.h; sourceTree = "<group>"; };
 		962E341F25929E12004FDF57 /* bitboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bitboard.cpp; sourceTree = "<group>"; };
-		962E342025929E12004FDF57 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		962E342125929E12004FDF57 /* material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = material.h; sourceTree = "<group>"; };
 		962E342225929E12004FDF57 /* psqt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = psqt.cpp; sourceTree = "<group>"; };
 		962E342325929E12004FDF57 /* benchmark.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = benchmark.cpp; sourceTree = "<group>"; };
@@ -173,6 +172,7 @@
 		962E344125929E12004FDF57 /* uci.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uci.cpp; sourceTree = "<group>"; };
 		962E344225929E12004FDF57 /* endgame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = endgame.cpp; sourceTree = "<group>"; };
 		962E34AC25934492004FDF57 /* nn-82215d0fd0df.nnue */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nn-82215d0fd0df.nnue"; sourceTree = "<group>"; };
+		962E34CA259359D4004FDF57 /* StockfishSendOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockfishSendOutput.h; sourceTree = "<group>"; };
 		96A9B7FC2591652100389888 /* StockfishBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockfishBridge.h; sourceTree = "<group>"; };
 		96A9B7FD2591662700389888 /* StockfishBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = StockfishBridge.mm; sourceTree = "<group>"; };
 		96A9B8032591EE5C00389888 /* Stockfish.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stockfish.cpp; sourceTree = "<group>"; };
@@ -237,6 +237,7 @@
 				96A9B7FD2591662700389888 /* StockfishBridge.mm */,
 				96A9B8032591EE5C00389888 /* Stockfish.cpp */,
 				96A9B8042591EE5C00389888 /* Stockfish.hpp */,
+				962E34CA259359D4004FDF57 /* StockfishSendOutput.h */,
 			);
 			path = Plugin;
 			sourceTree = "<group>";
@@ -302,7 +303,6 @@
 				962E341D25929E12004FDF57 /* tune.h */,
 				962E341E25929E12004FDF57 /* misc.h */,
 				962E341F25929E12004FDF57 /* bitboard.cpp */,
-				962E342025929E12004FDF57 /* Makefile */,
 				962E342125929E12004FDF57 /* material.h */,
 				962E342225929E12004FDF57 /* psqt.cpp */,
 				962E342325929E12004FDF57 /* benchmark.cpp */,
@@ -419,6 +419,7 @@
 			files = (
 				962E346225929E12004FDF57 /* tune.h in Headers */,
 				962E346625929E12004FDF57 /* material.h in Headers */,
+				962E34CB259359D4004FDF57 /* StockfishSendOutput.h in Headers */,
 				962E347225929E13004FDF57 /* movegen.h in Headers */,
 				50ADFF99201F53D600D50D53 /* Plugin.h in Headers */,
 				962E348025929E13004FDF57 /* uci.h in Headers */,
@@ -642,7 +643,6 @@
 				962E348325929E13004FDF57 /* position.cpp in Sources */,
 				962E348425929E13004FDF57 /* uci.cpp in Sources */,
 				962E346D25929E12004FDF57 /* tbprobe.cpp in Sources */,
-				962E346525929E12004FDF57 /* Makefile in Sources */,
 				962E346925929E12004FDF57 /* movepick.cpp in Sources */,
 				962E347025929E12004FDF57 /* evaluate.cpp in Sources */,
 				962E344F25929E12004FDF57 /* timeman.cpp in Sources */,
@@ -800,10 +800,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Plugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)\n$(FRAMEWORK_SEARCH_PATHS)\n$(FRAMEWORK_SEARCH_PATHS)";
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CPLUSPLUSFLAGS = "-O3";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DUSE_PTHREADS",
+					"-mpopcnt",
+					"-DUSE_POPCNT",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.getcapacitor.Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -830,10 +834,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Plugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "-O3";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DUSE_PTHREADS",
+					"-mpopcnt",
+					"-DUSE_POPCNT",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.getcapacitor.Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

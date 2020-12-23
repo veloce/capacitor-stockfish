@@ -9,6 +9,7 @@
 #include "syzygy/tbprobe.h"
 #include "threadbuf.h"
 #include "Stockfish.hpp"
+#include "StockfishSendOutput.h"
 
 namespace PSQT {
   void init();
@@ -18,7 +19,7 @@ namespace CapacitorStockfish
 {
   static std::string CMD_EXIT = "stockfish:exit";
 
-  auto readstdout = [](void *stockfish) {
+  auto readstdout = [](void *bridge) {
     std::streambuf* out = std::cout.rdbuf();
 
     threadbuf lichbuf(8, 8096);
@@ -28,12 +29,12 @@ namespace CapacitorStockfish
 
     std::string o = "";
 
-    while(o != CMD_EXIT) {
+    while (o != CMD_EXIT) {
       std::string line;
       std::getline(lichin, line);
-      if(line != CMD_EXIT) {
+      if (line != CMD_EXIT) {
         const char* coutput = line.c_str();
-        //StockfishSendOutput(stockfish, coutput);
+        StockfishSendOutput(bridge, coutput);
       } else {
         o = CMD_EXIT;
       }
@@ -47,8 +48,8 @@ namespace CapacitorStockfish
 
   std::thread reader;
 
-  void init(void *stockfish) {
-    reader = std::thread(readstdout, stockfish);
+  void init(void *bridge) {
+    reader = std::thread(readstdout, bridge);
 
     UCI::init(Options);
     Tune::init();

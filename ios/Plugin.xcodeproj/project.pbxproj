@@ -19,13 +19,7 @@
 		962E344325929E12004FDF57 /* Copying.txt in Resources */ = {isa = PBXBuildFile; fileRef = 962E33F825929E12004FDF57 /* Copying.txt */; };
 		962E344425929E12004FDF57 /* AUTHORS in Resources */ = {isa = PBXBuildFile; fileRef = 962E33F925929E12004FDF57 /* AUTHORS */; };
 		962E344525929E12004FDF57 /* Top CPU Contributors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 962E33FA25929E12004FDF57 /* Top CPU Contributors.txt */; };
-		962E344625929E12004FDF57 /* signature.sh in Resources */ = {isa = PBXBuildFile; fileRef = 962E33FC25929E12004FDF57 /* signature.sh */; };
-		962E344725929E12004FDF57 /* instrumented.sh in Resources */ = {isa = PBXBuildFile; fileRef = 962E33FD25929E12004FDF57 /* instrumented.sh */; };
-		962E344825929E12004FDF57 /* perft.sh in Resources */ = {isa = PBXBuildFile; fileRef = 962E33FE25929E12004FDF57 /* perft.sh */; };
-		962E344925929E12004FDF57 /* reprosearch.sh in Resources */ = {isa = PBXBuildFile; fileRef = 962E33FF25929E12004FDF57 /* reprosearch.sh */; };
 		962E344A25929E12004FDF57 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 962E340025929E12004FDF57 /* README.md */; };
-		962E344B25929E12004FDF57 /* appveyor.yml in Resources */ = {isa = PBXBuildFile; fileRef = 962E340125929E12004FDF57 /* appveyor.yml */; };
-		962E344C25929E12004FDF57 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 962E340225929E12004FDF57 /* .travis.yml */; };
 		962E344D25929E12004FDF57 /* endgame.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E340425929E12004FDF57 /* endgame.h */; };
 		962E344E25929E12004FDF57 /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E340525929E12004FDF57 /* thread.cpp */; };
 		962E344F25929E12004FDF57 /* timeman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E340625929E12004FDF57 /* timeman.cpp */; };
@@ -178,6 +172,7 @@
 		962E344025929E12004FDF57 /* position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = position.cpp; sourceTree = "<group>"; };
 		962E344125929E12004FDF57 /* uci.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uci.cpp; sourceTree = "<group>"; };
 		962E344225929E12004FDF57 /* endgame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = endgame.cpp; sourceTree = "<group>"; };
+		962E34AC25934492004FDF57 /* nn-82215d0fd0df.nnue */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nn-82215d0fd0df.nnue"; sourceTree = "<group>"; };
 		96A9B7FC2591652100389888 /* StockfishBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockfishBridge.h; sourceTree = "<group>"; };
 		96A9B7FD2591662700389888 /* StockfishBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = StockfishBridge.mm; sourceTree = "<group>"; };
 		96A9B8032591EE5C00389888 /* Stockfish.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stockfish.cpp; sourceTree = "<group>"; };
@@ -296,6 +291,7 @@
 		962E340325929E12004FDF57 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				962E34AC25934492004FDF57 /* nn-82215d0fd0df.nnue */,
 				962E340425929E12004FDF57 /* endgame.h */,
 				962E340525929E12004FDF57 /* thread.cpp */,
 				962E340625929E12004FDF57 /* timeman.cpp */,
@@ -547,17 +543,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962E344C25929E12004FDF57 /* .travis.yml in Resources */,
 				962E344525929E12004FDF57 /* Top CPU Contributors.txt in Resources */,
-				962E344725929E12004FDF57 /* instrumented.sh in Resources */,
 				962E344325929E12004FDF57 /* Copying.txt in Resources */,
 				962E344425929E12004FDF57 /* AUTHORS in Resources */,
-				962E344825929E12004FDF57 /* perft.sh in Resources */,
 				962E347925929E13004FDF57 /* UNLICENCE in Resources */,
-				962E344925929E12004FDF57 /* reprosearch.sh in Resources */,
 				962E344A25929E12004FDF57 /* README.md in Resources */,
-				962E344B25929E12004FDF57 /* appveyor.yml in Resources */,
-				962E344625929E12004FDF57 /* signature.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +803,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)\n$(FRAMEWORK_SEARCH_PATHS)\n$(FRAMEWORK_SEARCH_PATHS)";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = "-O3";
 				PRODUCT_BUNDLE_IDENTIFIER = com.getcapacitor.Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -842,6 +833,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "-O3";
 				PRODUCT_BUNDLE_IDENTIFIER = com.getcapacitor.Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

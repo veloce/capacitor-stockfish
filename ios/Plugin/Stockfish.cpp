@@ -8,7 +8,6 @@
 #include "uci.h"
 #include "syzygy/tbprobe.h"
 #include "threadbuf.h"
-
 #include "Stockfish.hpp"
 
 namespace PSQT {

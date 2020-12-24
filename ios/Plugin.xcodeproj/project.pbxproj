@@ -74,7 +74,7 @@
 		962E348325929E13004FDF57 /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E344025929E12004FDF57 /* position.cpp */; };
 		962E348425929E13004FDF57 /* uci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E344125929E12004FDF57 /* uci.cpp */; };
 		962E348525929E13004FDF57 /* endgame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E344225929E12004FDF57 /* endgame.cpp */; };
-		962E34CB259359D4004FDF57 /* StockfishSendOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E34CA259359D4004FDF57 /* StockfishSendOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		962E34CB259359D4004FDF57 /* StockfishSendOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E34CA259359D4004FDF57 /* StockfishSendOutput.h */; };
 		96A9B8052591EE5C00389888 /* Stockfish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96A9B8032591EE5C00389888 /* Stockfish.cpp */; };
 		96A9B8062591EE5C00389888 /* Stockfish.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 96A9B8042591EE5C00389888 /* Stockfish.hpp */; };
 /* End PBXBuildFile section */

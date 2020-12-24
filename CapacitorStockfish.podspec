@@ -11,7 +11,9 @@ Pod::Spec.new do |s|
   s.author = package['author']
   s.platform = :ios
   s.source = { :git => package['repository']['url'], :tag => s.version.to_s }
-  s.source_files = 'ios/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}', 'stockfish/src/**/*.{h,cpp}'
+  s.source_files = 'ios/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}', 'stockfish/src/**/*.{h,cpp}', 'lib/*.h'
+  s.private_header_files = 'ios/Plugin/StockfishSendOutput.h', 'stockfish/src/**/*.h', 'lib/*.h'
+  s.header_mappings_dir = 'stockfish/src/'
   s.exclude_files = 'stockfish/src/main.cpp', 'stockfish/src/Makefile'
   s.ios.deployment_target  = '11.0'
   s.dependency 'Capacitor'
@@ -19,6 +21,6 @@ Pod::Spec.new do |s|
   s.xcconfig = {
     'CLANG_CXX_LANGUAGE_STANDARD' => 'c++17',
     'CLANG_CXX_LIBRARY' => 'libc++',
-    'OTHER_CPLUSPLUSFLAGS' => '-DUSE_PTHREADS -mpopcnt -DUSE_POPCNT'
+    'OTHER_CPLUSPLUSFLAGS' => '-DNNUE_EMBEDDING_OFF -DUSE_PTHREADS -mpopcnt -DUSE_POPCNT'
   }
 end

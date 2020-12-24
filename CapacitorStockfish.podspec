@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.source = { :git => package['repository']['url'], :tag => s.version.to_s }
   s.source_files = 'ios/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}', 'stockfish/src/**/*.{h,cpp}', 'lib/*.h'
-  s.private_header_files = 'ios/Plugin/StockfishSendOutput.h', 'stockfish/src/**/*.h', 'lib/*.h'
-  s.header_mappings_dir = 'stockfish/src/'
+  s.private_header_files = 'stockfish/src/**/*.h', 'lib/*.h'
+  s.header_mappings_dir = '.'
   s.exclude_files = 'stockfish/src/main.cpp', 'stockfish/src/Makefile'
   s.ios.deployment_target  = '11.0'
   s.dependency 'Capacitor'

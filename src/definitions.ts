@@ -5,5 +5,7 @@ declare module '@capacitor/core' {
 }
 
 export interface StockfishPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  start(): Promise<void>;
+  cmd(options: { cmd: string }): Promise<void>;
+  exit(): Promise<void>;
 }

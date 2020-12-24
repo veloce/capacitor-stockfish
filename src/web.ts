@@ -9,9 +9,16 @@ export class StockfishWeb extends WebPlugin implements StockfishPlugin {
     });
   }
 
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async start(): Promise<void> {
+    console.log('start');
+  }
+
+  async cmd(options: { cmd: string }): Promise<void> {
+    console.log('cmd', options.cmd);
+  }
+
+  async exit(): Promise<void> {
+    console.log('exit');
   }
 }
 

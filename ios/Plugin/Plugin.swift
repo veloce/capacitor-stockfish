@@ -6,11 +6,15 @@ public class Stockfish: CAPPlugin {
     
     let EVENT_OUTPUT = "stockfishOutput"
 
-    let stockfish = StockfishBridge()
+    var stockfish: StockfishBridge?
     var isInit = false
 
+    @objc override public func load() {
+        stockfish = StockfishBridge(plugin: self)
+    }
+
     @objc func start(_ call: CAPPluginCall) {
-        stockfish.start()
+        stockfish?.start()
         isInit = true
         call.success()
     }
@@ -21,7 +25,7 @@ public class Stockfish: CAPPlugin {
                 call.reject("Must provide a cmd")
                 return
             }
-            stockfish.cmd(cmd)
+            stockfish?.cmd(cmd)
             call.resolve()
         } else {
             call.reject("You must call start before anything else")
@@ -30,8 +34,8 @@ public class Stockfish: CAPPlugin {
     
     @objc func exit(_ call: CAPPluginCall) {
         if (isInit) {
-            stockfish.cmd("quit")
-            stockfish.exit()
+            stockfish?.cmd("quit")
+            stockfish?.exit()
             isInit = false
         }
         call.success()

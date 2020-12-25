@@ -1,8 +1,15 @@
 #import <Foundation/Foundation.h>
+#import <Capacitor/Capacitor.h>
 #import "StockfishSendOutput.h"
 
 @interface StockfishBridge : NSObject
-    - (void) start;
-    - (void) cmd: (NSString*)command;
-    - (void) exit;
+
+@property(strong, nonatomic) CAPPlugin *plugin;
+
+- (instancetype)initWithPlugin:(CAPPlugin *)plugin;
+
+- (void) start;
+- (void) cmd: (NSString*)command;
+- (void) exit;
+
 @end

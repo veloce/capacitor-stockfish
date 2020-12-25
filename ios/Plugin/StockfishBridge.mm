@@ -4,6 +4,14 @@
 
 @implementation StockfishBridge
 
+- (instancetype)initWithPlugin:(CAPPlugin *)plugin {
+    self = [super init];
+    if (self) {
+        _plugin = plugin;
+    }
+    return self;
+}
+
 - (void) start {
     CapacitorStockfish::init((__bridge void*)self);
 }
@@ -17,7 +25,8 @@
 }
 
 - (void) notifyListeners: (NSString*)output {
-    // todo
+    NSDictionary *dict = @{ @"line" : output };
+    [_plugin notifyListeners:@"output" data:dict retainUntilConsumed:YES];
 }
 
 void StockfishSendOutput (void *bridge, const char *output)

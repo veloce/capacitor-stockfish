@@ -26,7 +26,7 @@
 
 - (void) notifyListeners: (NSString*)output {
     NSDictionary *dict = @{ @"line" : output };
-    [_plugin notifyListeners:@"output" data:dict retainUntilConsumed:YES];
+    [_plugin notifyListeners:@"output" data:dict];
 }
 
 void StockfishSendOutput (void *bridge, const char *output)

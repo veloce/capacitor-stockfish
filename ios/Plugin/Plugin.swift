@@ -11,6 +11,19 @@ public class Stockfish: CAPPlugin {
 
     @objc override public func load() {
         stockfish = StockfishBridge(plugin: self)
+
+        // TODO: wait before stopping
+        NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification, object: nil, queue: OperationQueue.main) { [weak self] (_) in
+            if ((self?.isInit) != nil) {
+                self?.stockfish?.cmd("quit")
+                self?.stockfish?.exit()
+                self?.isInit = false
+            }
+        }
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
     @objc func start(_ call: CAPPluginCall) {
@@ -40,4 +53,5 @@ public class Stockfish: CAPPlugin {
         }
         call.success()
     }
+
 }

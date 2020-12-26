@@ -1,16 +1,20 @@
 #include <jni.h>
 #include <android/log.h>
 #include <string>
-#include <threadbuf.h>
-#include <bitboard.h>
-#include <endgame.h>
-#include <tt.h>
-#include <search.cpp>
+#include "bitboard.h"
+#include "endgame.h"
+#include "position.h"
+#include "search.h"
+#include "thread.h"
+#include "tt.h"
+#include "uci.h"
+#include "syzygy/tbprobe.h"
+#include "threadbuf.h"
 
 #define LOGD(TAG,...) __android_log_print(ANDROID_LOG_DEBUG  , TAG,__VA_ARGS__)
 
 extern "C" {
-  JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniInit(JNIEnv *env, jobject obj, jlong memorySize);
+  JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniInit(JNIEnv *env, jobject obj);
   JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniExit(JNIEnv *env, jobject obj);
   JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniCmd(JNIEnv *env, jobject obj, jstring jcmd);
 };
@@ -34,7 +38,7 @@ auto readstdout = []() {
   // Save standard output
   std::streambuf* out = std::cout.rdbuf();
 
-  threadbuf lichbuf(8, 1024);
+  threadbuf lichbuf(8, 8096);
   std::ostream lichout(&lichbuf);
   std::cout.rdbuf(lichout.rdbuf());
   std::istream lichin(&lichbuf);
@@ -65,7 +69,7 @@ auto readstdout = []() {
 
 std::thread reader;
 
-JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniInit(JNIEnv *env, jobject obj, jlong memorySize) {
+JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniInit(JNIEnv *env, jobject obj) {
   jobj = env->NewGlobalRef(obj);
   env->GetJavaVM(&jvm);
   jclass classStockfish = env->GetObjectClass(obj);
@@ -73,21 +77,14 @@ JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniInit(JN
 
   reader = std::thread(readstdout);
 
-  // Allow using 16th of the total memory for the hashtable
-  uint64_t hashSize = memorySize / 16;
-  // Convert to megabytes
-  hashSize /= 1024 * 1024;
-  hashSize = std::max((uint64_t)16, hashSize);
-
   UCI::init(Options);
-  Options["Hash"] = (int)hashSize;
   Tune::init();
   PSQT::init();
   Bitboards::init();
   Position::init();
   Bitbases::init();
   Endgames::init();
-  Threads.set(Options["Threads"]);
+  Threads.set(size_t(Options["Threads"]));
   Search::clear(); // After threads are up
 #ifdef USE_NNUE
   Eval::NNUE::init();

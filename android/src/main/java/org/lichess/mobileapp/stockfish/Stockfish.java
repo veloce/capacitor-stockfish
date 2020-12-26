@@ -12,34 +12,41 @@ import com.getcapacitor.PluginMethod;
 @NativePlugin
 public final class Stockfish extends Plugin {
 
-  private static final String EVENT_OUTPUT = "stockfishOutput";
+  private static final String EVENT_OUTPUT = "output";
 
   private boolean isInit = false;
 
   static {
-    System.loadLibrary("stockfish-jni");
+    System.loadLibrary("stockfish");
   }
 
   // JNI
-  public native void jniInit(long memorySize);
+  public native void jniInit();
   public native void jniExit();
   public native void jniCmd(String cmd);
   public void onMessage(byte[] b) {
-    String output = new String(b);
+    JSObject output = new JSObject();
+    output.put("line", new String(b));
     notifyListeners(EVENT_OUTPUT, output);
   }
   // end JNI
 
   @PluginMethod
-  public void init(PluginCall call) {
+  public void getMemory(PluginCall call) {
+    Context context = getContext();
+    ActivityManager actManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+    ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
+    actManager.getMemoryInfo(memInfo);
+    long totalMemory = memInfo.totalMem;
+    JSObject ret = new JSObject();
+    ret.put("value", totalMemory);
+    call.success(ret);
+  }
+
+  @PluginMethod
+  public void start(PluginCall call) {
     if (!isInit) {
-      // Get total device RAM for hashtable sizing
-      Context context = getContext();
-      ActivityManager actManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-      ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
-      actManager.getMemoryInfo(memInfo);
-      long totalMemory = memInfo.totalMem;
-      jniInit(totalMemory);
+      jniInit();
       isInit = true;
     }
     call.success();
@@ -70,6 +77,7 @@ public final class Stockfish extends Plugin {
 
   private void doExit() {
     if (isInit) {
+      jniCmd("stop");
       jniExit();
       isInit = false;
     }

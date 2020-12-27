@@ -26,6 +26,14 @@ public class Stockfish: CAPPlugin {
         NotificationCenter.default.removeObserver(self)
     }
 
+    @objc func getMaxMemory(_ call: CAPPluginCall) {
+        // allow max 1/16th of total mem
+        let maxMemInMb = (ProcessInfo().physicalMemory / 16) / (1024 * 1024)
+        call.success([
+            "value": maxMemInMb
+        ])
+    }
+
     @objc func start(_ call: CAPPluginCall) {
         stockfish?.start()
         isInit = true

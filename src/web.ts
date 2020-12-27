@@ -9,6 +9,11 @@ export class StockfishWeb extends WebPlugin implements StockfishPlugin {
     });
   }
 
+  async getMaxMemory(): Promise<number> {
+    console.log('getMaxMemory');
+    return 0
+  }
+
   async start(): Promise<void> {
     console.log('start');
   }

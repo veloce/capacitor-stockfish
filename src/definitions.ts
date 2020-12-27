@@ -1,11 +1,12 @@
 declare module '@capacitor/core' {
   interface PluginRegistry {
-    Stockfish: StockfishPlugin;
+    Stockfish: StockfishPlugin
   }
 }
 
 export interface StockfishPlugin {
-  start(): Promise<void>;
-  cmd(options: { cmd: string }): Promise<void>;
-  exit(): Promise<void>;
+  getMaxMemory(): Promise<number>
+  start(): Promise<void>
+  cmd(options: { cmd: string }): Promise<void>
+  exit(): Promise<void>
 }

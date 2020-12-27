@@ -4,18 +4,33 @@ import Capacitor
 @objc(Stockfish)
 public class Stockfish: CAPPlugin {
     
-    let EVENT_OUTPUT = "stockfishOutput"
+    private let EVENT_OUTPUT = "stockfishOutput"
 
-    var stockfish: StockfishBridge?
-    var isInit = false
+    private var stockfish: StockfishBridge?
+    private var isInit = false
 
     @objc override public func load() {
         stockfish = StockfishBridge(plugin: self)
+        var onPauseWorkItem: DispatchWorkItem?
 
-        // TODO: wait before stopping
         NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification, object: nil, queue: OperationQueue.main) { [weak self] (_) in
             if ((self?.isInit) != nil) {
-                self?.stockfish?.cmd("quit")
+                onPauseWorkItem = DispatchWorkItem {
+                    self?.stockfish?.cmd("stop")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 60 * 10, execute: onPauseWorkItem!)
+            }
+        }
+        
+        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: OperationQueue.main) { [weak self] (_) in
+            if ((self?.isInit) != nil) {
+                onPauseWorkItem?.cancel()
+            }
+        }
+
+        NotificationCenter.default.addObserver(forName: UIApplication.willTerminateNotification, object: nil, queue: OperationQueue.main) { [weak self] (_) in
+            if ((self?.isInit) != nil) {
+                self?.stockfish?.cmd("stop")
                 self?.stockfish?.exit()
                 self?.isInit = false
             }

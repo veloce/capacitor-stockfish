@@ -2,14 +2,23 @@
 #import <Capacitor/Capacitor.h>
 #import "StockfishSendOutput.h"
 
-@interface StockfishBridge : NSObject
-
-@property(strong, nonatomic) CAPPlugin *plugin;
+@protocol StockfishBridge <NSObject>
 
 - (instancetype)initWithPlugin:(CAPPlugin *)plugin;
-
 - (void) start;
 - (void) cmd: (NSString*)command;
 - (void) exit;
+
+@end
+
+@interface StockfishBridge:NSObject <StockfishBridge>
+
+@property(strong, nonatomic) CAPPlugin *plugin;
+
+@end
+
+@interface StockfishVariantsBridge:NSObject <StockfishBridge>
+
+@property(strong, nonatomic) CAPPlugin *plugin;
 
 @end

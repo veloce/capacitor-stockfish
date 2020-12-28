@@ -310,19 +310,15 @@ namespace {
 
 void UCI::command(std::string cmd) {
   static bool initialized = false;
-  static StateListPtr states;
-  static std::unique_ptr<Position> pos;
-  static std::shared_ptr<Thread> uiThread;
+  static Position pos;
+  static StateListPtr states(new std::deque<StateInfo>(1));
+  string token;
 
   if (!initialized) {
-      states.reset(new std::deque<StateInfo>(1));
-      uiThread = std::make_shared<Thread>(0);
-      pos.reset(new Position());
-      pos->set(StartFENs[CHESS_VARIANT], false, CHESS_VARIANT, &states->back(), uiThread.get());
+      pos.set(StartFENs[CHESS_VARIANT], false, CHESS_VARIANT, &states->back(), Threads.main());
       initialized = true;
   }
 
-  string token;
 
   istringstream is(cmd);
 

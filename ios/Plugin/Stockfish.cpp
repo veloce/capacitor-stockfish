@@ -7,7 +7,7 @@
 #include "../../stockfish/src/tt.h"
 #include "../../stockfish/src/uci.h"
 #include "../../stockfish/src/syzygy/tbprobe.h"
-#include "threadbuf.h"
+#include "../../lib/threadbuf.h"
 #include "Stockfish.hpp"
 #include "StockfishSendOutput.h"
 

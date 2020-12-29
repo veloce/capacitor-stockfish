@@ -5,7 +5,7 @@ declare module '@capacitor/core' {
 }
 
 export interface StockfishPlugin {
-  getMaxMemory(): Promise<number>
+  getMaxMemory(): Promise<{ value: number }>
   start(): Promise<void>
   cmd(options: { cmd: string }): Promise<void>
   exit(): Promise<void>

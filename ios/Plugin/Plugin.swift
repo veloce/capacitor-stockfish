@@ -50,8 +50,10 @@ public class Stockfish: CAPPlugin {
     }
 
     @objc func start(_ call: CAPPluginCall) {
-        stockfish?.start()
-        isInit = true
+        if (!isInit) {
+            stockfish?.start()
+            isInit = true
+        }
         call.success()
     }
 

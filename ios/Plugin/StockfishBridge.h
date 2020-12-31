@@ -6,10 +6,13 @@
 
 @property(strong, nonatomic) CAPPlugin *plugin;
 
++ (NSString*) getCPUType;
+
 - (instancetype)initWithPlugin:(CAPPlugin *)plugin;
 
 - (void) start;
 - (void) cmd: (NSString*)command;
 - (void) exit;
+
 
 @end

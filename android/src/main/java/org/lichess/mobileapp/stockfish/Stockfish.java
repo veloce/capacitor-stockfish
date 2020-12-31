@@ -2,6 +2,8 @@ package org.lichess.mobileapp.stockfish;
 
 import android.app.ActivityManager;
 import android.content.Context;
+import android.os.Build;
+
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
@@ -39,6 +41,20 @@ public final class Stockfish extends Plugin {
     notifyListeners(EVENT_OUTPUT, output);
   }
   // end JNI
+
+  @PluginMethod
+  public void getCPUArch(PluginCall call) {
+    // The possible values are armeabi, armeabi-v7a, arm64-v8a, x86, x86_64, mips, mips64
+    String abi;
+    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+      abi = Build.CPU_ABI;
+    } else {
+      abi = Build.SUPPORTED_ABIS[0];
+    }
+    JSObject ret = new JSObject();
+    ret.put("value", abi);
+    call.success(ret);
+  }
 
   @PluginMethod
   public void getMaxMemory(PluginCall call) {

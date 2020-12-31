@@ -28,6 +28,7 @@ LOCAL_SRC_FILES := \
 	../../stockfish/src/uci.cpp \
 	../../stockfish/src/endgame.cpp
 LOCAL_LDLIBS := -llog -landroid
+LOCAL_ARM_NEON := true
 LOCAL_CPP_FEATURES := exceptions
 
 include $(BUILD_SHARED_LIBRARY)

@@ -40,6 +40,12 @@ public class Stockfish: CAPPlugin {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
+    
+    @objc func getCPUArch(_ call: CAPPluginCall) {
+        call.success([
+            "value": StockfishBridge.getCPUType() ?? "unknown"
+        ])
+    }
 
     @objc func getMaxMemory(_ call: CAPPluginCall) {
         // allow max 1/16th of total mem

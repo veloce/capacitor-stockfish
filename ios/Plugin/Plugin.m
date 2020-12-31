@@ -7,6 +7,7 @@
 CAP_PLUGIN(Stockfish, "Stockfish",
            CAP_PLUGIN_METHOD(removeAllListeners, CAPPluginReturnNone);
            CAP_PLUGIN_METHOD(getMaxMemory, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(getCPUArch, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(start, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(cmd, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(exit, CAPPluginReturnPromise);

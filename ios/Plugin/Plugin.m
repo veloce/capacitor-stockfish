@@ -4,7 +4,7 @@
 
 // Define the plugin using the CAP_PLUGIN Macro, and
 // each method the plugin supports using the CAP_PLUGIN_METHOD macro.
-CAP_PLUGIN(Stockfish, "Stockfish",
+CAP_PLUGIN(StockfishVariants, "StockfishVariants",
            CAP_PLUGIN_METHOD(removeAllListeners, CAPPluginReturnNone);
            CAP_PLUGIN_METHOD(getMaxMemory, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(getCPUArch, CAPPluginReturnPromise);

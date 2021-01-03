@@ -1,8 +1,8 @@
 import Foundation
 import Capacitor
 
-@objc(Stockfish)
-public class Stockfish: CAPPlugin {
+@objc(StockfishVariants)
+public class StockfishVariants: CAPPlugin {
     
     private let EVENT_OUTPUT = "stockfishOutput"
 

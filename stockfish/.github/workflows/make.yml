@@ -1,0 +1,26 @@
+name: Make CI
+
+on:
+  push:
+  pull_request:
+    branches: [ master, no-nnue ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: configure
+      run: sudo apt install expect && pip3 install python-chess && git clone https://github.com/ddugovic/chess-artist.git ./tests/chess-artist --depth 1
+    - name: make
+      run: cd src && make -j3 build ARCH=x86-64-bmi2 COMP=clang debug=yes
+    - name: make net
+      run: cd src && make net
+    - name: make check
+      run: cd src && ../tests/perft.sh && ../tests/reprosearch.sh && ../tests/puzzle.sh

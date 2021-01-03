@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source_files = 'ios/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}', 'stockfish/src/**/*.{h,cpp}', 'lib/*.h'
   s.private_header_files = 'stockfish/src/**/*.h', 'lib/*.h'
   s.header_mappings_dir = '.'
-  s.exclude_files = 'stockfish/src/main.cpp', 'stockfish/src/Makefile'
+  s.exclude_files = 'stockfish/src/main.cpp', 'stockfish/src/nnue/*', 'stockfish/src/Makefile'
   s.ios.deployment_target  = '11.0'
   s.dependency 'Capacitor'
   s.swift_version = '5.1'

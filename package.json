@@ -1,7 +1,7 @@
 {
-  "name": "capacitor-stockfish",
+  "name": "capacitor-stockfish-variants",
   "version": "0.0.1",
-  "description": "Ionic Capacitor Stockfish interface",
+  "description": "Ionic Capacitor Stockfish multi variants fork interface",
   "main": "dist/plugin.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",

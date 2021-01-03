@@ -308,18 +308,18 @@ namespace {
 /// run 'bench', once the command is executed the function returns immediately.
 /// In addition to the UCI ones, also some additional debug commands are supported.
 
-void UCI::loop(int argc, char* argv[]) {
+void UCI::command(std::string cmd) {
 
-  Position pos;
-  string token, cmd;
-  StateListPtr states(new std::deque<StateInfo>(1));
+  static bool initialized = false;
+  static Position pos;
+  string token;
+  static StateListPtr states(new std::deque<StateInfo>(1));
 
-  pos.set(StartFENs[CHESS_VARIANT], false, CHESS_VARIANT, &states->back(), Threads.main());
+  if (!initialized) {
+      pos.set(StartFENs[CHESS_VARIANT], false, CHESS_VARIANT, &states->back(), Threads.main());
+      initialized = true;
+  }
 
-  for (int i = 1; i < argc; ++i)
-      cmd += std::string(argv[i]) + " ";
-
-  do {
       if (argc == 1 && !getline(cin, cmd)) // Block here waiting for input or EOF
           cmd = "quit";
 
@@ -360,7 +360,6 @@ void UCI::loop(int argc, char* argv[]) {
       else
           sync_cout << "Unknown command: " << cmd << sync_endl;
 
-  } while (token != "quit" && argc == 1); // Command line args are one-shot
 }
 
 

@@ -1,7 +1,7 @@
 import { WebPlugin } from '@capacitor/core';
 import { StockfishPlugin } from './definitions';
 
-export class StockfishWeb extends WebPlugin implements StockfishPlugin {
+export class StockfishVariantsWeb extends WebPlugin implements StockfishPlugin {
   constructor() {
     super({
       name: 'Stockfish',
@@ -9,9 +9,9 @@ export class StockfishWeb extends WebPlugin implements StockfishPlugin {
     });
   }
 
-  async getMaxMemory(): Promise<number> {
+  async getMaxMemory(): Promise<{ value: number }> {
     console.log('getMaxMemory');
-    return 0
+    return { value: 0 }
   }
 
   async start(): Promise<void> {
@@ -27,9 +27,9 @@ export class StockfishWeb extends WebPlugin implements StockfishPlugin {
   }
 }
 
-const Stockfish = new StockfishWeb();
+const StockfishVariants = new StockfishVariantsWeb();
 
-export { Stockfish };
+export { StockfishVariants };
 
 import { registerWebPlugin } from '@capacitor/core';
-registerWebPlugin(Stockfish);
+registerWebPlugin(StockfishVariants);

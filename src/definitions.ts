@@ -1,6 +1,6 @@
 declare module '@capacitor/core' {
   interface PluginRegistry {
-    Stockfish: StockfishPlugin
+    StockfishVariants: StockfishPlugin
   }
 }
 

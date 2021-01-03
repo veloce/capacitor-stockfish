@@ -320,9 +320,6 @@ void UCI::command(std::string cmd) {
       initialized = true;
   }
 
-      if (argc == 1 && !getline(cin, cmd)) // Block here waiting for input or EOF
-          cmd = "quit";
-
       istringstream is(cmd);
 
       token.clear(); // Avoid a stale if getline() returns empty or blank line

@@ -17,7 +17,7 @@ import com.getcapacitor.PluginMethod;
 
 
 @NativePlugin
-public final class Stockfish extends Plugin {
+public final class StockfishVariants extends Plugin {
 
   private static final String EVENT_OUTPUT = "output";
 
@@ -28,7 +28,7 @@ public final class Stockfish extends Plugin {
   private ScheduledFuture<?> stopOnPauseHandle;
 
   static {
-    System.loadLibrary("stockfish");
+    System.loadLibrary("stockfish-variants");
   }
 
   // JNI

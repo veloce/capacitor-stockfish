@@ -3,7 +3,7 @@ require 'json'
 package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
 Pod::Spec.new do |s|
-  s.name = 'CapacitorStockfish'
+  s.name = 'CapacitorStockfishVariants'
   s.version = package['version']
   s.summary = package['description']
   s.license = package['license']
@@ -21,6 +21,6 @@ Pod::Spec.new do |s|
   s.xcconfig = {
     'CLANG_CXX_LANGUAGE_STANDARD' => 'gnu++17',
     'CLANG_CXX_LIBRARY' => 'libc++',
-    'OTHER_CPLUSPLUSFLAGS' => '-DNNUE_EMBEDDING_OFF -DIS_64BIT -DUSE_PTHREADS -DUSE_POPCNT -DUSE_NEON'
+    'OTHER_CPLUSPLUSFLAGS' => '-DNNUE_EMBEDDING_OFF -DIS_64BIT -DUSE_PTHREADS -DUSE_POPCNT -DUSE_NEON -DKOTH -DTHREECHECK -DATOMIC -DHORDE -DRACE -DANTI -DCRAZYHOUSE'
   }
 end

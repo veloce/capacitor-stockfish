@@ -14,9 +14,9 @@
 #define LOGD(TAG,...) __android_log_print(ANDROID_LOG_DEBUG  , TAG,__VA_ARGS__)
 
 extern "C" {
-  JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniInit(JNIEnv *env, jobject obj);
-  JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniExit(JNIEnv *env, jobject obj);
-  JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniCmd(JNIEnv *env, jobject obj, jstring jcmd);
+  JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_StockfishVariants_jniInit(JNIEnv *env, jobject obj);
+  JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_StockfishVariants_jniExit(JNIEnv *env, jobject obj);
+  JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_StockfishVariants_jniCmd(JNIEnv *env, jobject obj, jstring jcmd);
 };
 
 static JavaVM *jvm;
@@ -69,7 +69,7 @@ auto readstdout = []() {
 
 std::thread reader;
 
-JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniInit(JNIEnv *env, jobject obj) {
+JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_StockfishVariants_jniInit(JNIEnv *env, jobject obj) {
   jobj = env->NewGlobalRef(obj);
   env->GetJavaVM(&jvm);
   jclass classStockfish = env->GetObjectClass(obj);
@@ -91,14 +91,14 @@ JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniInit(JN
 #endif
 }
 
-JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniExit(JNIEnv *env, jobject obj) {
+JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_StockfishVariants_jniExit(JNIEnv *env, jobject obj) {
   UCI::command("quit");
   sync_cout << CMD_EXIT << sync_endl;
   reader.join();
   Threads.set(0);
 }
 
-JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniCmd(JNIEnv *env, jobject obj, jstring jcmd) {
+JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_StockfishVariants_jniCmd(JNIEnv *env, jobject obj, jstring jcmd) {
   const char *cmd = env->GetStringUTFChars(jcmd, (jboolean *)0);
   UCI::command(cmd);
   env->ReleaseStringUTFChars(jcmd, cmd);

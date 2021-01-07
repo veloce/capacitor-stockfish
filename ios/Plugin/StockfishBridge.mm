@@ -16,15 +16,15 @@
 }
 
 - (void) start {
-    CapacitorStockfish::init((__bridge void*)self);
+    CapacitorStockfishVariants::init((__bridge void*)self);
 }
 
 - (void) cmd: (NSString*)command {
-    CapacitorStockfish::cmd(std::string([command UTF8String]));
+    CapacitorStockfishVariants::cmd(std::string([command UTF8String]));
 }
 
 - (void) exit {
-    CapacitorStockfish::exit();
+    CapacitorStockfishVariants::exit();
 }
 
 - (void) notifyListeners: (NSString*)output {

@@ -15,7 +15,7 @@ namespace PSQT {
   void init();
 }
 
-namespace CapacitorStockfish
+namespace CapacitorStockfishVariants
 {
   static std::string CMD_EXIT = "stockfish:exit";
 

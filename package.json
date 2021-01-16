@@ -37,6 +37,8 @@
     "dist/",
     "ios/",
     "android/",
+    "stockfish/",
+    "lib/",
     "CapacitorStockfishVariants.podspec"
   ],
   "keywords": [

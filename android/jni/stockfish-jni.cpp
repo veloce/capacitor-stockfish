@@ -86,9 +86,7 @@ JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniInit(JN
   Endgames::init();
   Threads.set(size_t(Options["Threads"]));
   Search::clear(); // After threads are up
-#ifdef USE_NNUE
-  Eval::NNUE::init();
-#endif
+  Eval::init_NNUE();
 }
 
 JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniExit(JNIEnv *env, jobject obj) {

@@ -1,9 +1,14 @@
 # Capacitor Stockfish plugin
 
+[Stockfish](https://stockfishchess.org/) chess engine interface for Ionic
+Capacitor.
 
-## Update Stockfish
+## API
 
-```
-git remote add stockfish https://github.com/ddugovic/Stockfish.git
-git subtree pull --prefix=stockfish --squash stockfish master
-```
+| Method                                           | Returns         |
+| ------------------------------------------------ | --------------- |
+| getCPUArch()                                     | `Promise<{ value: string }>` |
+| getMaxMemory()                                   | `Promise<{ value: number }>` |
+| start()                                          | `Promise<void>` |
+| cmd(options: { cmd: string })                    | `Promise<void>` |
+| exit()                                           | `Promise<void>` |

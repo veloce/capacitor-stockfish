@@ -71,6 +71,7 @@ namespace CapacitorStockfishVariants
   }
 
   void exit() {
+    UCI::command("quit");
     sync_cout << CMD_EXIT << sync_endl;
     reader.join();
     Threads.set(0);

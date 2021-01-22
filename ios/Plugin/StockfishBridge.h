@@ -2,13 +2,15 @@
 #import <Capacitor/Capacitor.h>
 #import "StockfishSendOutput.h"
 
+@class StockfishVariants;
+
 @interface StockfishBridge : NSObject
 
-@property(strong, nonatomic) CAPPlugin *plugin;
+@property(strong, nonatomic) StockfishVariants *plugin;
 
 + (NSString*) getCPUType;
 
-- (instancetype)initWithPlugin:(CAPPlugin *)plugin;
+- (instancetype)initWithPlugin:(StockfishVariants *)plugin;
 
 - (void) start;
 - (void) cmd: (NSString*)command;

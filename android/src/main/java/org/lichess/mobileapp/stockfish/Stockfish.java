@@ -19,8 +19,7 @@ import com.getcapacitor.PluginMethod;
 @NativePlugin
 public final class Stockfish extends Plugin {
 
-  private static final String EVENT_OUTPUT = "output";
-
+  private PluginCall outputCall;
   private boolean isInit = false;
 
   private final ScheduledExecutorService scheduler =
@@ -35,10 +34,8 @@ public final class Stockfish extends Plugin {
   public native void jniInit();
   public native void jniExit();
   public native void jniCmd(String cmd);
-  public void onMessage(byte[] b) {
-    JSObject output = new JSObject();
-    output.put("line", new String(b));
-    notifyListeners(EVENT_OUTPUT, output);
+  public void onMessage(byte[] bytes) {
+    sendOutput(bytes);
   }
   // end JNI
 
@@ -78,6 +75,15 @@ public final class Stockfish extends Plugin {
     call.success();
   }
 
+  @PluginMethod(returnType = PluginMethod.RETURN_NONE)
+  public void onOutput(PluginCall call) {
+    if (this.outputCall != null) {
+      bridge.releaseCall(this.outputCall);
+    }
+    call.save();
+    this.outputCall = call;
+  }
+
   @PluginMethod
   public void cmd(PluginCall call) {
     if (isInit) {
@@ -95,17 +101,13 @@ public final class Stockfish extends Plugin {
 
   @PluginMethod
   public void exit(PluginCall call) {
-    if (isInit) {
-      doExit();
-    }
+    doExit();
     call.success();
   }
 
   @Override
   protected void handleOnDestroy() {
-    if (isInit) {
-      doExit();
-    }
+    doExit();
   }
 
   @Override
@@ -131,10 +133,19 @@ public final class Stockfish extends Plugin {
   }
 
   private void doExit() {
+    outputCall = null;
     if (isInit) {
       jniCmd("stop");
       jniExit();
       isInit = false;
+    }
+  }
+
+  private void sendOutput(byte[] bytes) {
+    if (outputCall != null) {
+      JSObject data = new JSObject();
+      data.put("line", new String(bytes));
+      outputCall.resolve(data);
     }
   }
 }

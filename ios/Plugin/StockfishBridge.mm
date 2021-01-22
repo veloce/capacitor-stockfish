@@ -2,12 +2,14 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 #include <mach/machine.h>
+#import <Capacitor/CAPPlugin.h>
+#import <CapacitorStockfishVariants/CapacitorStockfishVariants-Swift.h>
 #import "StockfishBridge.h"
 #import "Stockfish.hpp"
 
 @implementation StockfishBridge
 
-- (instancetype)initWithPlugin:(CAPPlugin *)plugin {
+- (instancetype)initWithPlugin:(StockfishVariants *)plugin {
     self = [super init];
     if (self) {
         _plugin = plugin;
@@ -27,9 +29,8 @@
     CapacitorStockfishVariants::exit();
 }
 
-- (void) notifyListeners: (NSString*)output {
-    NSDictionary *dict = @{ @"line" : output };
-    [_plugin notifyListeners:@"output" data:dict];
+- (void) sendOutput: (NSString*)output {
+    [_plugin sendOutput:output];
 }
 
 + (NSString*) getCPUType {
@@ -75,7 +76,7 @@
 
 void StockfishSendOutput (void *bridge, const char *output)
 {
-  [(__bridge id) bridge notifyListeners:[NSString stringWithUTF8String:output]];
+  [(__bridge id) bridge sendOutput:[NSString stringWithUTF8String:output]];
 }
 
 @end

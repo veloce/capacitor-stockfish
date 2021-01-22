@@ -7,7 +7,14 @@ public class StockfishVariants: CAPPlugin {
     private let EVENT_OUTPUT = "stockfishOutput"
 
     private var stockfish: StockfishBridge?
+    private var outputCall: CAPPluginCall?
     private var isInit = false
+    
+    @objc public func sendOutput(_ output: String) {
+        outputCall?.resolve([
+            "line": output
+        ])
+    }
 
     @objc override public func load() {
         stockfish = StockfishBridge(plugin: self)
@@ -63,6 +70,14 @@ public class StockfishVariants: CAPPlugin {
         call.success()
     }
 
+    @objc func onOutput(_ call: CAPPluginCall) {
+        if (outputCall != nil) {
+            bridge.releaseCall(outputCall!)
+        }
+        call.save()
+        outputCall = call
+    }
+
     @objc func cmd(_ call: CAPPluginCall) {
         if (isInit) {
             guard let cmd = call.options["cmd"] as? String else {
@@ -84,5 +99,4 @@ public class StockfishVariants: CAPPlugin {
         }
         call.success()
     }
-
 }

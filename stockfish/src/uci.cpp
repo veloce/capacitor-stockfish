@@ -229,14 +229,19 @@ namespace {
 void UCI::command(std::string cmd) {
 
   static bool initialized = false;
-  static Position pos;
-  string token;
-  static StateListPtr states(new std::deque<StateInfo>(1));
+  static StateListPtr states;
+  static std::unique_ptr<Position> pos;
+  static std::shared_ptr<Thread> uiThread;
 
   if (!initialized) {
-      pos.set(StartFEN, false, &states->back(), Threads.main());
+      states.reset(new std::deque<StateInfo>(1));
+      uiThread = std::make_shared<Thread>(0);
+      pos.reset(new Position());
+      pos->set(StartFEN, false, &states->back(), uiThread.get());
       initialized = true;
   }
+
+  string token;
 
 
       istringstream is(cmd);
@@ -245,8 +250,16 @@ void UCI::command(std::string cmd) {
       is >> skipws >> token;
 
       if (    token == "quit"
-          ||  token == "stop")
+          ||  token == "stop") {
           Threads.stop = true;
+
+          if (token == "quit") {
+              pos.reset();
+              uiThread.reset();
+              initialized = false;
+              return;
+          }
+      }
 
       // The GUI sends 'ponderhit' to tell us the user has played the expected move.
       // So 'ponderhit' will be sent if we were told to ponder on the same move the
@@ -261,17 +274,17 @@ void UCI::command(std::string cmd) {
                     << "\nuciok"  << sync_endl;
 
       else if (token == "setoption")  setoption(is);
-      else if (token == "go")         go(pos, is, states);
-      else if (token == "position")   position(pos, is, states);
+      else if (token == "go")         go(*pos, is, states);
+      else if (token == "position")   position(*pos, is, states);
       else if (token == "ucinewgame") Search::clear();
       else if (token == "isready")    sync_cout << "readyok" << sync_endl;
 
       // Additional custom non-UCI commands, mainly for debugging.
       // Do not use these commands during a search!
-      else if (token == "flip")     pos.flip();
-      else if (token == "bench")    bench(pos, is, states);
-      else if (token == "d")        sync_cout << pos << sync_endl;
-      else if (token == "eval")     trace_eval(pos);
+      else if (token == "flip")     pos->flip();
+      else if (token == "bench")    bench(*pos, is, states);
+      else if (token == "d")        sync_cout << *pos << sync_endl;
+      else if (token == "eval")     trace_eval(*pos);
       else if (token == "compiler") sync_cout << compiler_info() << sync_endl;
       else
           sync_cout << "Unknown command: " << cmd << sync_endl;

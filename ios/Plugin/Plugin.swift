@@ -71,9 +71,7 @@ public class StockfishVariants: CAPPlugin {
     }
 
     @objc func onOutput(_ call: CAPPluginCall) {
-        if (outputCall != nil) {
-            bridge.releaseCall(outputCall!)
-        }
+        releaseOutputCall()
         call.save()
         outputCall = call
     }
@@ -92,11 +90,19 @@ public class StockfishVariants: CAPPlugin {
     }
     
     @objc func exit(_ call: CAPPluginCall) {
+        releaseOutputCall()
         if (isInit) {
             stockfish?.cmd("quit")
             stockfish?.exit()
             isInit = false
         }
         call.success()
+    }
+
+    func releaseOutputCall() {
+        if (outputCall != nil) {
+            bridge.releaseCall(outputCall!)
+            outputCall = nil
+        }
     }
 }

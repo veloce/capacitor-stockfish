@@ -77,9 +77,7 @@ public final class Stockfish extends Plugin {
 
   @PluginMethod(returnType = PluginMethod.RETURN_NONE)
   public void onOutput(PluginCall call) {
-    if (this.outputCall != null) {
-      bridge.releaseCall(this.outputCall);
-    }
+    releaseOutputCall();
     call.save();
     this.outputCall = call;
   }
@@ -133,11 +131,18 @@ public final class Stockfish extends Plugin {
   }
 
   private void doExit() {
-    outputCall = null;
+    releaseOutputCall();
     if (isInit) {
       jniCmd("stop");
       jniExit();
       isInit = false;
+    }
+  }
+
+  private void releaseOutputCall() {
+    if (outputCall != null) {
+      bridge.releaseCall(outputCall);
+      outputCall = null;
     }
   }
 

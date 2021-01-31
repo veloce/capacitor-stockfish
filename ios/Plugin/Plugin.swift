@@ -1,19 +1,15 @@
 import Foundation
 import Capacitor
 
-@objc(Stockfish)
-public class Stockfish: CAPPlugin {
+@objc(StockfishVariants)
+public class StockfishVariants: CAPPlugin {
     
-    private let EVENT_OUTPUT = "stockfishOutput"
-
     private var stockfish: StockfishBridge?
-    private var outputCall: CAPPluginCall?
     private var isInit = false
     
+    private let template = "{\"output\": \"%@\"}"
     @objc public func sendOutput(_ output: String) {
-        outputCall?.resolve([
-            "line": output
-        ])
+        bridge.triggerWindowJSEvent(eventName: "stockfish", data: String(format: template, output))
     }
 
     @objc override public func load() {
@@ -70,12 +66,6 @@ public class Stockfish: CAPPlugin {
         call.success()
     }
 
-    @objc func onOutput(_ call: CAPPluginCall) {
-        releaseOutputCall()
-        call.save()
-        outputCall = call
-    }
-
     @objc func cmd(_ call: CAPPluginCall) {
         if (isInit) {
             guard let cmd = call.options["cmd"] as? String else {
@@ -90,19 +80,11 @@ public class Stockfish: CAPPlugin {
     }
     
     @objc func exit(_ call: CAPPluginCall) {
-        releaseOutputCall()
         if (isInit) {
             stockfish?.cmd("quit")
             stockfish?.exit()
             isInit = false
         }
         call.success()
-    }
-
-    func releaseOutputCall() {
-        if (outputCall != nil) {
-            bridge.releaseCall(outputCall!)
-            outputCall = nil
-        }
     }
 }

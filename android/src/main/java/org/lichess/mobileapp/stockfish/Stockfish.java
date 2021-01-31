@@ -35,7 +35,9 @@ public final class Stockfish extends Plugin {
   public native void jniExit();
   public native void jniCmd(String cmd);
   public void onMessage(byte[] bytes) {
-    sendOutput(bytes);
+    JSObject obj = new JSObject();
+    obj.put("output", new String(bytes));
+    bridge.triggerWindowJSEvent("stockfish", obj.toString());
   }
   // end JNI
 
@@ -73,13 +75,6 @@ public final class Stockfish extends Plugin {
       isInit = true;
     }
     call.success();
-  }
-
-  @PluginMethod(returnType = PluginMethod.RETURN_NONE)
-  public void onOutput(PluginCall call) {
-    releaseOutputCall();
-    call.save();
-    this.outputCall = call;
   }
 
   @PluginMethod
@@ -131,26 +126,10 @@ public final class Stockfish extends Plugin {
   }
 
   private void doExit() {
-    releaseOutputCall();
     if (isInit) {
       jniCmd("stop");
       jniExit();
       isInit = false;
-    }
-  }
-
-  private void releaseOutputCall() {
-    if (outputCall != null) {
-      bridge.releaseCall(outputCall);
-      outputCall = null;
-    }
-  }
-
-  private void sendOutput(byte[] bytes) {
-    if (outputCall != null) {
-      JSObject data = new JSObject();
-      data.put("line", new String(bytes));
-      outputCall.resolve(data);
     }
   }
 }

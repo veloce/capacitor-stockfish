@@ -8,7 +8,6 @@ CAP_PLUGIN(StockfishVariants, "StockfishVariants",
            CAP_PLUGIN_METHOD(getMaxMemory, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(getCPUArch, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(start, CAPPluginReturnPromise);
-           CAP_PLUGIN_METHOD(onOutput, CAPPluginReturnNone);
            CAP_PLUGIN_METHOD(cmd, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(exit, CAPPluginReturnPromise);
 )

@@ -1,8 +1,8 @@
 import Foundation
 import Capacitor
 
-@objc(StockfishVariants)
-public class StockfishVariants: CAPPlugin {
+@objc(Stockfish)
+public class Stockfish: CAPPlugin {
     
     private var stockfish: StockfishBridge?
     private var isInit = false

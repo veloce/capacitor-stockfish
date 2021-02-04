@@ -3,13 +3,13 @@
 #include <sys/sysctl.h>
 #include <mach/machine.h>
 #import <Capacitor/CAPPlugin.h>
-#import <CapacitorStockfishVariants/CapacitorStockfishVariants-Swift.h>
+#import <CapacitorStockfish/CapacitorStockfish-Swift.h>
 #import "StockfishBridge.h"
 #import "Stockfish.hpp"
 
 @implementation StockfishBridge
 
-- (instancetype)initWithPlugin:(StockfishVariants *)plugin {
+- (instancetype)initWithPlugin:(Stockfish *)plugin {
     self = [super init];
     if (self) {
         _plugin = plugin;

@@ -1,6 +1,6 @@
 /*
   Stockfish, a UCI chess playing engine derived from Glaurung 2.1
-  Copyright (C) 2004-2020 The Stockfish developers (see AUTHORS file)
+  Copyright (C) 2004-2021 The Stockfish developers (see AUTHORS file)
 
   Stockfish is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -85,7 +85,7 @@ namespace {
     Position p;
     p.set(pos.fen(), Options["UCI_Chess960"], &states->back(), Threads.main());
 
-    Eval::verify_NNUE();
+    Eval::NNUE::verify();
 
     sync_cout << "\n" << Eval::trace(p) << sync_endl;
   }
@@ -170,7 +170,7 @@ namespace {
 
         if (token == "go" || token == "eval")
         {
-            cerr << "\nPosition: " << cnt++ << '/' << num << endl;
+            cerr << "\nPosition: " << cnt++ << '/' << num << " (" << pos.fen() << ")" << endl;
             if (token == "go")
             {
                go(pos, is, states);

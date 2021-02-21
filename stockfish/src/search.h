@@ -1,6 +1,6 @@
 /*
   Stockfish, a UCI chess playing engine derived from Glaurung 2.1
-  Copyright (C) 2004-2020 The Stockfish developers (see AUTHORS file)
+  Copyright (C) 2004-2021 The Stockfish developers (see AUTHORS file)
 
   Stockfish is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -49,6 +49,7 @@ struct Stack {
   int moveCount;
   bool inCheck;
   bool ttPv;
+  bool ttHit;
 };
 
 
@@ -70,7 +71,6 @@ struct RootMove {
   Value previousScore = -VALUE_INFINITE;
   int selDepth = 0;
   int tbRank = 0;
-  int bestMoveCount = 0;
   Value tbScore;
   std::vector<Move> pv;
 };

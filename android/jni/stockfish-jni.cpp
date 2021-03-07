@@ -87,7 +87,7 @@ JNIEXPORT void JNICALL Java_org_lichess_mobileapp_stockfish_Stockfish_jniInit(JN
   Threads.set(size_t(Options["Threads"]));
   Search::clear(); // After threads are up
 #ifndef NNUE_EMBEDDING_OFF
-  Eval::init_NNUE();
+  Eval::NNUE::init();
 #endif
 }
 

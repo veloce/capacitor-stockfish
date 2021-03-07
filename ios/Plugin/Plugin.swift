@@ -13,26 +13,25 @@ public class Stockfish: CAPPlugin {
     }
 
     @objc override public func load() {
-        stockfish = StockfishBridge(plugin: self)
         var onPauseWorkItem: DispatchWorkItem?
 
         NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification, object: nil, queue: OperationQueue.main) { [weak self] (_) in
-            if ((self?.isInit) != nil) {
+            if (self!.isInit) {
                 onPauseWorkItem = DispatchWorkItem {
                     self?.stockfish?.cmd("stop")
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 60 * 10, execute: onPauseWorkItem!)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 60 * 3, execute: onPauseWorkItem!)
             }
         }
         
         NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: OperationQueue.main) { [weak self] (_) in
-            if ((self?.isInit) != nil) {
+            if (self!.isInit) {
                 onPauseWorkItem?.cancel()
             }
         }
 
         NotificationCenter.default.addObserver(forName: UIApplication.willTerminateNotification, object: nil, queue: OperationQueue.main) { [weak self] (_) in
-            if ((self?.isInit) != nil) {
+            if (self!.isInit) {
                 self?.stockfish?.cmd("stop")
                 self?.stockfish?.exit()
                 self?.isInit = false
@@ -60,6 +59,7 @@ public class Stockfish: CAPPlugin {
 
     @objc func start(_ call: CAPPluginCall) {
         if (!isInit) {
+            stockfish = StockfishBridge(plugin: self)
             stockfish?.start()
             isInit = true
         }

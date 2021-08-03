@@ -9,9 +9,9 @@ export class StockfishWeb extends WebPlugin implements StockfishPlugin {
     });
   }
 
-  async getMaxMemory(): Promise<number> {
+  async getMaxMemory(): Promise<{ value: number }> {
     console.log('getMaxMemory');
-    return 0
+    return { value: 0 }
   }
 
   async start(): Promise<void> {
@@ -26,10 +26,3 @@ export class StockfishWeb extends WebPlugin implements StockfishPlugin {
     console.log('exit');
   }
 }
-
-const Stockfish = new StockfishWeb();
-
-export { Stockfish };
-
-import { registerWebPlugin } from '@capacitor/core';
-registerWebPlugin(Stockfish);

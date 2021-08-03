@@ -16,7 +16,7 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 
 
-@NativePlugin
+@CapacitorPlugin(name = "Stockfish")
 public final class Stockfish extends Plugin {
 
   private PluginCall outputCall;

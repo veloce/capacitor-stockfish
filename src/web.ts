@@ -26,10 +26,3 @@ export class StockfishVariantsWeb extends WebPlugin implements StockfishPlugin {
     console.log('exit');
   }
 }
-
-const StockfishVariants = new StockfishVariantsWeb();
-
-export { StockfishVariants };
-
-import { registerWebPlugin } from '@capacitor/core';
-registerWebPlugin(StockfishVariants);

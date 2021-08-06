@@ -14,9 +14,10 @@ Pod::Spec.new do |s|
   s.source_files = 'ios/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}', 'stockfish/src/**/*.{h,cpp}', 'lib/*.h'
   s.public_header_files = 'ios/Plugin/**/*.h'
   s.exclude_files = 'stockfish/src/main.cpp', 'stockfish/src/nnue/*', 'stockfish/src/Makefile'
-  s.ios.deployment_target  = '11.0'
+  s.ios.deployment_target  = '12.0'
   s.dependency 'Capacitor'
   s.swift_version = '5.1'
+  s.compiler_flags = '-fmodules -fcxx-modules'
   s.xcconfig = {
     'CLANG_CXX_LANGUAGE_STANDARD' => 'gnu++17',
     'CLANG_CXX_LIBRARY' => 'libc++',

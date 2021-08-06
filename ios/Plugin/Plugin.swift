@@ -9,7 +9,7 @@ public class StockfishVariants: CAPPlugin {
     
     private let template = "{\"output\": \"%@\"}"
     @objc public func sendOutput(_ output: String) {
-        bridge.triggerWindowJSEvent(eventName: "stockfish", data: String(format: template, output))
+        bridge?.triggerWindowJSEvent(eventName: "stockfish", data: String(format: template, output))
     }
 
     @objc override public func load() {
@@ -44,7 +44,7 @@ public class StockfishVariants: CAPPlugin {
     }
     
     @objc func getCPUArch(_ call: CAPPluginCall) {
-        call.success([
+        call.resolve([
             "value": StockfishBridge.getCPUType() ?? "unknown"
         ])
     }
@@ -52,7 +52,7 @@ public class StockfishVariants: CAPPlugin {
     @objc func getMaxMemory(_ call: CAPPluginCall) {
         // allow max 1/16th of total mem
         let maxMemInMb = (ProcessInfo().physicalMemory / 16) / (1024 * 1024)
-        call.success([
+        call.resolve([
             "value": maxMemInMb
         ])
     }
@@ -63,7 +63,7 @@ public class StockfishVariants: CAPPlugin {
             stockfish?.start()
             isInit = true
         }
-        call.success()
+        call.resolve()
     }
 
     @objc func cmd(_ call: CAPPluginCall) {
@@ -85,6 +85,6 @@ public class StockfishVariants: CAPPlugin {
             stockfish?.exit()
             isInit = false
         }
-        call.success()
+        call.resolve()
     }
 }

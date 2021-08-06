@@ -14,9 +14,10 @@ import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
+import com.getcapacitor.annotation.CapacitorPlugin;
 
 
-@NativePlugin
+@CapacitorPlugin(name = "StockfishVariants")
 public final class StockfishVariants extends Plugin {
 
   private PluginCall outputCall;

@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
   s.swift_version = '5.1'
   s.compiler_flags = '-fmodules -fcxx-modules'
   s.xcconfig = {
+    'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
     'CLANG_CXX_LANGUAGE_STANDARD' => 'gnu++17',
     'CLANG_CXX_LIBRARY' => 'libc++',
     'OTHER_CPLUSPLUSFLAGS' => '-fno-exceptions -std=c++17 -DUSE_PTHREADS -DKOTH -DTHREECHECK -DATOMIC -DHORDE -DRACE -DANTI -DCRAZYHOUSE -DNDEBUG -O3 -DIS_64BIT -DUSE_POPCNT -flto=thin',

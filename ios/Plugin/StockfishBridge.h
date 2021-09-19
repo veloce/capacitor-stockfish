@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import <Capacitor/Capacitor.h>
 #import "StockfishSendOutput.h"
 
 @class StockfishVariants;

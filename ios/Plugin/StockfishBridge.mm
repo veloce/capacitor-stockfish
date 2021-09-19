@@ -2,6 +2,7 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 #include <mach/machine.h>
+#import <Capacitor/CAPPlugin.h>
 #import <CapacitorStockfishVariants/CapacitorStockfishVariants-Swift.h>
 #import "StockfishBridge.h"
 #import "Stockfish.hpp"

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		03FC29A292ACC40490383A1F /* Pods_Plugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2A61DA5A1F2DD4F959604D /* Pods_Plugin.framework */; };
 		20C0B05DCFC8E3958A738AF2 /* Pods_PluginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6753A823D3815DB436415E3 /* Pods_PluginTests.framework */; };
-		50ADFF92201F53D600D50D53 /* Plugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADFF88201F53D600D50D53 /* Plugin.framework */; };
+		50ADFF92201F53D600D50D53 /* CapacitorStockfish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADFF88201F53D600D50D53 /* CapacitorStockfish.framework */; };
 		50ADFF97201F53D600D50D53 /* PluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADFF96201F53D600D50D53 /* PluginTests.swift */; };
 		50ADFF99201F53D600D50D53 /* Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 50ADFF8B201F53D600D50D53 /* Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50ADFFA42020D75100D50D53 /* Capacitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADFFA52020D75100D50D53 /* Capacitor.framework */; };
@@ -80,6 +80,7 @@
 		962E35C22594EF0A004FDF57 /* StockfishBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 962E35C12594EF0A004FDF57 /* StockfishBridge.mm */; };
 		96A9B8052591EE5C00389888 /* Stockfish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96A9B8032591EE5C00389888 /* Stockfish.cpp */; };
 		96A9B8062591EE5C00389888 /* Stockfish.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 96A9B8042591EE5C00389888 /* Stockfish.hpp */; };
+		9CF4416A270CCEC5001CCB34 /* module.mapfile in Resources */ = {isa = PBXBuildFile; fileRef = 9CF44169270CCEC5001CCB34 /* module.mapfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,10 +95,10 @@
 
 /* Begin PBXFileReference section */
 		3B2A61DA5A1F2DD4F959604D /* Pods_Plugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		50ADFF88201F53D600D50D53 /* Plugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Plugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50ADFF88201F53D600D50D53 /* CapacitorStockfish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CapacitorStockfish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50ADFF8B201F53D600D50D53 /* Plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plugin.h; sourceTree = "<group>"; };
 		50ADFF8C201F53D600D50D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50ADFF91201F53D600D50D53 /* PluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50ADFF91201F53D600D50D53 /* CapacitorStockfishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapacitorStockfishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50ADFF96201F53D600D50D53 /* PluginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginTests.swift; sourceTree = "<group>"; };
 		50ADFF98201F53D600D50D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50ADFFA52020D75100D50D53 /* Capacitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capacitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +179,7 @@
 		96A9B8032591EE5C00389888 /* Stockfish.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stockfish.cpp; sourceTree = "<group>"; };
 		96A9B8042591EE5C00389888 /* Stockfish.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stockfish.hpp; sourceTree = "<group>"; };
 		96ED1B6440D6672E406C8D19 /* Pods-PluginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PluginTests/Pods-PluginTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9CF44169270CCEC5001CCB34 /* module.mapfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = module.mapfile; sourceTree = "<group>"; };
 		F65BB2953ECE002E1EF3E424 /* Pods-PluginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PluginTests/Pods-PluginTests.release.xcconfig"; sourceTree = "<group>"; };
 		F6753A823D3815DB436415E3 /* Pods_PluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -196,7 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50ADFF92201F53D600D50D53 /* Plugin.framework in Frameworks */,
+				50ADFF92201F53D600D50D53 /* CapacitorStockfish.framework in Frameworks */,
 				20C0B05DCFC8E3958A738AF2 /* Pods_PluginTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,8 +220,8 @@
 		50ADFF89201F53D600D50D53 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50ADFF88201F53D600D50D53 /* Plugin.framework */,
-				50ADFF91201F53D600D50D53 /* PluginTests.xctest */,
+				50ADFF88201F53D600D50D53 /* CapacitorStockfish.framework */,
+				50ADFF91201F53D600D50D53 /* CapacitorStockfishTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,6 +240,7 @@
 				962E34CA259359D4004FDF57 /* StockfishSendOutput.h */,
 				962E35BB2594EECE004FDF57 /* StockfishBridge.h */,
 				962E35C12594EF0A004FDF57 /* StockfishBridge.mm */,
+				9CF44169270CCEC5001CCB34 /* module.mapfile */,
 			);
 			path = Plugin;
 			sourceTree = "<group>";
@@ -460,9 +463,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		50ADFF87201F53D600D50D53 /* Plugin */ = {
+		50ADFF87201F53D600D50D53 /* CapacitorStockfish */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50ADFF9C201F53D600D50D53 /* Build configuration list for PBXNativeTarget "Plugin" */;
+			buildConfigurationList = 50ADFF9C201F53D600D50D53 /* Build configuration list for PBXNativeTarget "CapacitorStockfish" */;
 			buildPhases = (
 				AB5B3E54B4E897F32C2279DA /* [CP] Check Pods Manifest.lock */,
 				50ADFF83201F53D600D50D53 /* Sources */,
@@ -474,14 +477,14 @@
 			);
 			dependencies = (
 			);
-			name = Plugin;
+			name = CapacitorStockfish;
 			productName = Plugin;
-			productReference = 50ADFF88201F53D600D50D53 /* Plugin.framework */;
+			productReference = 50ADFF88201F53D600D50D53 /* CapacitorStockfish.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		50ADFF90201F53D600D50D53 /* PluginTests */ = {
+		50ADFF90201F53D600D50D53 /* CapacitorStockfishTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50ADFF9F201F53D600D50D53 /* Build configuration list for PBXNativeTarget "PluginTests" */;
+			buildConfigurationList = 50ADFF9F201F53D600D50D53 /* Build configuration list for PBXNativeTarget "CapacitorStockfishTests" */;
 			buildPhases = (
 				0596884F929ED6F1DE134961 /* [CP] Check Pods Manifest.lock */,
 				50ADFF8D201F53D600D50D53 /* Sources */,
@@ -494,9 +497,9 @@
 			dependencies = (
 				50ADFF94201F53D600D50D53 /* PBXTargetDependency */,
 			);
-			name = PluginTests;
+			name = CapacitorStockfishTests;
 			productName = PluginTests;
-			productReference = 50ADFF91201F53D600D50D53 /* PluginTests.xctest */;
+			productReference = 50ADFF91201F53D600D50D53 /* CapacitorStockfishTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -521,7 +524,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 50ADFF82201F53D600D50D53 /* Build configuration list for PBXProject "Plugin" */;
+			buildConfigurationList = 50ADFF82201F53D600D50D53 /* Build configuration list for PBXProject "CapacitorStockfish" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -533,8 +536,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50ADFF87201F53D600D50D53 /* Plugin */,
-				50ADFF90201F53D600D50D53 /* PluginTests */,
+				50ADFF87201F53D600D50D53 /* CapacitorStockfish */,
+				50ADFF90201F53D600D50D53 /* CapacitorStockfishTests */,
 			);
 		};
 /* End PBXProject section */
@@ -548,6 +551,7 @@
 				962E344325929E12004FDF57 /* Copying.txt in Resources */,
 				962E344425929E12004FDF57 /* AUTHORS in Resources */,
 				962E347925929E13004FDF57 /* UNLICENCE in Resources */,
+				9CF4416A270CCEC5001CCB34 /* module.mapfile in Resources */,
 				962E344A25929E12004FDF57 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,7 +671,7 @@
 /* Begin PBXTargetDependency section */
 		50ADFF94201F53D600D50D53 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 50ADFF87201F53D600D50D53 /* Plugin */;
+			target = 50ADFF87201F53D600D50D53 /* CapacitorStockfish */;
 			targetProxy = 50ADFF93201F53D600D50D53 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -798,15 +802,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					NNUE_EMBEDDING_OFF,
+				);
 				INFOPLIST_FILE = Plugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)\n$(FRAMEWORK_SEARCH_PATHS)\n$(FRAMEWORK_SEARCH_PATHS)";
+				MODULEMAP_FILE = Plugin/module.mapfile;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DUSE_PTHREADS",
 					"-mpopcnt",
 					"-DUSE_POPCNT",
+					"-DNNUE_EMBEDDING_OFF",
+					"-DIS_64BIT",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.getcapacitor.Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -832,15 +843,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					NNUE_EMBEDDING_OFF,
+				);
 				INFOPLIST_FILE = Plugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
+				MODULEMAP_FILE = Plugin/module.mapfile;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DUSE_PTHREADS",
 					"-mpopcnt",
 					"-DUSE_POPCNT",
+					"-DNNUE_EMBEDDING_OFF",
+					"-DIS_64BIT",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.getcapacitor.Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -886,7 +904,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50ADFF82201F53D600D50D53 /* Build configuration list for PBXProject "Plugin" */ = {
+		50ADFF82201F53D600D50D53 /* Build configuration list for PBXProject "CapacitorStockfish" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50ADFF9A201F53D600D50D53 /* Debug */,
@@ -895,7 +913,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50ADFF9C201F53D600D50D53 /* Build configuration list for PBXNativeTarget "Plugin" */ = {
+		50ADFF9C201F53D600D50D53 /* Build configuration list for PBXNativeTarget "CapacitorStockfish" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50ADFF9D201F53D600D50D53 /* Debug */,
@@ -904,7 +922,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50ADFF9F201F53D600D50D53 /* Build configuration list for PBXNativeTarget "PluginTests" */ = {
+		50ADFF9F201F53D600D50D53 /* Build configuration list for PBXNativeTarget "CapacitorStockfishTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50ADFFA0201F53D600D50D53 /* Debug */,

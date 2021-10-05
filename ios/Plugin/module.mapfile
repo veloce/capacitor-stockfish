@@ -1,0 +1,4 @@
+framework module CapacitorStockfish {
+  header "StockfishBridge.h"
+  header "StockfishSendOutput.h"
+}

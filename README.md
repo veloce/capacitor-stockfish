@@ -12,3 +12,9 @@ Capacitor.
 | start()                                           | `Promise<void>` |
 | cmd(options: { cmd: string })                     | `Promise<void>` |
 | exit()                                            | `Promise<void>` |
+
+## Example usage
+
+- https://github.com/veloce/lichobile/blob/master/src/stockfish.ts
+- https://github.com/veloce/lichobile/blob/master/src/ui/analyse/ceval/StockfishClient.ts
+

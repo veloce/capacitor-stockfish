@@ -89,7 +89,7 @@ public final class Stockfish extends Plugin {
       jniCmd(cmd);
       call.success();
     } else {
-      call.error("Please call init before doing anything.");
+      call.error("Please call start before doing anything.");
     }
   }
 

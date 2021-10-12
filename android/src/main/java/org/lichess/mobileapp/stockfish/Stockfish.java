@@ -14,9 +14,10 @@ import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
+import com.getcapacitor.annotation.CapacitorPlugin;
 
 
-@NativePlugin
+@CapacitorPlugin(name = "Stockfish")
 public final class Stockfish extends Plugin {
 
   private PluginCall outputCall;
@@ -88,7 +89,7 @@ public final class Stockfish extends Plugin {
       jniCmd(cmd);
       call.success();
     } else {
-      call.error("Please call init before doing anything.");
+      call.error("Please call start before doing anything.");
     }
   }
 

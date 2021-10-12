@@ -1,1 +1,4 @@
 /build
+.gradle
+.cxx
+.idea

@@ -7,10 +7,10 @@ def capacitor_pods
   pod 'CapacitorCordova', :path => '../node_modules/@capacitor/ios'
 end
 
-target 'Plugin' do
+target 'CapacitorStockfish' do
   capacitor_pods
 end
 
-target 'PluginTests' do
+target 'CapacitorStockfishTests' do
   capacitor_pods
 end

@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03FC29A292ACC40490383A1F /* Pods_Plugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2A61DA5A1F2DD4F959604D /* Pods_Plugin.framework */; };
-		20C0B05DCFC8E3958A738AF2 /* Pods_PluginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6753A823D3815DB436415E3 /* Pods_PluginTests.framework */; };
-		50ADFF92201F53D600D50D53 /* Plugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADFF88201F53D600D50D53 /* Plugin.framework */; };
+		50ADFF92201F53D600D50D53 /* CapacitorStockfishVariants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADFF88201F53D600D50D53 /* CapacitorStockfishVariants.framework */; };
 		50ADFF97201F53D600D50D53 /* PluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADFF96201F53D600D50D53 /* PluginTests.swift */; };
 		50ADFF99201F53D600D50D53 /* Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 50ADFF8B201F53D600D50D53 /* Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50ADFFA42020D75100D50D53 /* Capacitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADFFA52020D75100D50D53 /* Capacitor.framework */; };
+		82485E924BAB2B97585F4C01 /* Pods_CapacitorStockfishVariantsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4787028A3C62E78C43C1E24 /* Pods_CapacitorStockfishVariantsTests.framework */; };
 		962E320D25924CED004FDF57 /* threadbuf.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E320C25924CED004FDF57 /* threadbuf.h */; };
 		962E344325929E12004FDF57 /* Copying.txt in Resources */ = {isa = PBXBuildFile; fileRef = 962E33F825929E12004FDF57 /* Copying.txt */; };
 		962E344425929E12004FDF57 /* AUTHORS in Resources */ = {isa = PBXBuildFile; fileRef = 962E33F925929E12004FDF57 /* AUTHORS */; };
@@ -22,21 +21,6 @@
 		962E344E25929E12004FDF57 /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E340525929E12004FDF57 /* thread.cpp */; };
 		962E344F25929E12004FDF57 /* timeman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E340625929E12004FDF57 /* timeman.cpp */; };
 		962E345025929E12004FDF57 /* ucioption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E340725929E12004FDF57 /* ucioption.cpp */; };
-		962E345125929E12004FDF57 /* evaluate_nnue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E340925929E12004FDF57 /* evaluate_nnue.cpp */; };
-		962E345225929E12004FDF57 /* affine_transform.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E340B25929E12004FDF57 /* affine_transform.h */; };
-		962E345325929E12004FDF57 /* clipped_relu.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E340C25929E12004FDF57 /* clipped_relu.h */; };
-		962E345425929E12004FDF57 /* input_slice.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E340D25929E12004FDF57 /* input_slice.h */; };
-		962E345525929E12004FDF57 /* nnue_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E340E25929E12004FDF57 /* nnue_common.h */; };
-		962E345625929E12004FDF57 /* nnue_feature_transformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E340F25929E12004FDF57 /* nnue_feature_transformer.h */; };
-		962E345725929E12004FDF57 /* index_list.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E341125929E12004FDF57 /* index_list.h */; };
-		962E345825929E12004FDF57 /* features_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E341225929E12004FDF57 /* features_common.h */; };
-		962E345925929E12004FDF57 /* half_kp.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E341325929E12004FDF57 /* half_kp.h */; };
-		962E345A25929E12004FDF57 /* half_kp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E341425929E12004FDF57 /* half_kp.cpp */; };
-		962E345B25929E12004FDF57 /* feature_set.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E341525929E12004FDF57 /* feature_set.h */; };
-		962E345C25929E12004FDF57 /* evaluate_nnue.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E341625929E12004FDF57 /* evaluate_nnue.h */; };
-		962E345D25929E12004FDF57 /* halfkp_256x2-32-32.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E341825929E12004FDF57 /* halfkp_256x2-32-32.h */; };
-		962E345E25929E12004FDF57 /* nnue_accumulator.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E341925929E12004FDF57 /* nnue_accumulator.h */; };
-		962E345F25929E12004FDF57 /* nnue_architecture.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E341A25929E12004FDF57 /* nnue_architecture.h */; };
 		962E346025929E12004FDF57 /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E341B25929E12004FDF57 /* types.h */; };
 		962E346125929E12004FDF57 /* misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 962E341C25929E12004FDF57 /* misc.cpp */; };
 		962E346225929E12004FDF57 /* tune.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E341D25929E12004FDF57 /* tune.h */; };
@@ -80,6 +64,8 @@
 		962E35C22594EF0A004FDF57 /* StockfishBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 962E35C12594EF0A004FDF57 /* StockfishBridge.mm */; };
 		96A9B8052591EE5C00389888 /* Stockfish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96A9B8032591EE5C00389888 /* Stockfish.cpp */; };
 		96A9B8062591EE5C00389888 /* Stockfish.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 96A9B8042591EE5C00389888 /* Stockfish.hpp */; };
+		9C33913D270CAC2400DD322F /* module.mapfile in Resources */ = {isa = PBXBuildFile; fileRef = 9C33913C270CAC2400DD322F /* module.mapfile */; };
+		DA42435A6CA4E58687BF5D2B /* Pods_CapacitorStockfishVariants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E523B38ACD543274E2C5E0D4 /* Pods_CapacitorStockfishVariants.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,15 +79,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B2A61DA5A1F2DD4F959604D /* Pods_Plugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		50ADFF88201F53D600D50D53 /* Plugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Plugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50ADFF88201F53D600D50D53 /* CapacitorStockfishVariants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CapacitorStockfishVariants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50ADFF8B201F53D600D50D53 /* Plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plugin.h; sourceTree = "<group>"; };
 		50ADFF8C201F53D600D50D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50ADFF91201F53D600D50D53 /* PluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50ADFF91201F53D600D50D53 /* CapacitorStockfishVariantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapacitorStockfishVariantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50ADFF96201F53D600D50D53 /* PluginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginTests.swift; sourceTree = "<group>"; };
 		50ADFF98201F53D600D50D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50ADFFA52020D75100D50D53 /* Capacitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capacitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E23F77F099397094342571A /* Pods-Plugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plugin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plugin/Pods-Plugin.debug.xcconfig"; sourceTree = "<group>"; };
+		63559E163FCE28E769E784AB /* Pods-CapacitorStockfishVariantsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapacitorStockfishVariantsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CapacitorStockfishVariantsTests/Pods-CapacitorStockfishVariantsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D3974C4C935389670597BC5 /* Pods-CapacitorStockfishVariantsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapacitorStockfishVariantsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CapacitorStockfishVariantsTests/Pods-CapacitorStockfishVariantsTests.release.xcconfig"; sourceTree = "<group>"; };
 		91781294A431A2A7CC6EB714 /* Pods-Plugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plugin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plugin/Pods-Plugin.release.xcconfig"; sourceTree = "<group>"; };
 		962E320C25924CED004FDF57 /* threadbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = threadbuf.h; path = ../../lib/threadbuf.h; sourceTree = "<group>"; };
 		962E33F825929E12004FDF57 /* Copying.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Copying.txt; sourceTree = "<group>"; };
@@ -118,21 +105,6 @@
 		962E340525929E12004FDF57 /* thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
 		962E340625929E12004FDF57 /* timeman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timeman.cpp; sourceTree = "<group>"; };
 		962E340725929E12004FDF57 /* ucioption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ucioption.cpp; sourceTree = "<group>"; };
-		962E340925929E12004FDF57 /* evaluate_nnue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = evaluate_nnue.cpp; sourceTree = "<group>"; };
-		962E340B25929E12004FDF57 /* affine_transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = affine_transform.h; sourceTree = "<group>"; };
-		962E340C25929E12004FDF57 /* clipped_relu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clipped_relu.h; sourceTree = "<group>"; };
-		962E340D25929E12004FDF57 /* input_slice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = input_slice.h; sourceTree = "<group>"; };
-		962E340E25929E12004FDF57 /* nnue_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nnue_common.h; sourceTree = "<group>"; };
-		962E340F25929E12004FDF57 /* nnue_feature_transformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nnue_feature_transformer.h; sourceTree = "<group>"; };
-		962E341125929E12004FDF57 /* index_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = index_list.h; sourceTree = "<group>"; };
-		962E341225929E12004FDF57 /* features_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features_common.h; sourceTree = "<group>"; };
-		962E341325929E12004FDF57 /* half_kp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = half_kp.h; sourceTree = "<group>"; };
-		962E341425929E12004FDF57 /* half_kp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = half_kp.cpp; sourceTree = "<group>"; };
-		962E341525929E12004FDF57 /* feature_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feature_set.h; sourceTree = "<group>"; };
-		962E341625929E12004FDF57 /* evaluate_nnue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evaluate_nnue.h; sourceTree = "<group>"; };
-		962E341825929E12004FDF57 /* halfkp_256x2-32-32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "halfkp_256x2-32-32.h"; sourceTree = "<group>"; };
-		962E341925929E12004FDF57 /* nnue_accumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nnue_accumulator.h; sourceTree = "<group>"; };
-		962E341A25929E12004FDF57 /* nnue_architecture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nnue_architecture.h; sourceTree = "<group>"; };
 		962E341B25929E12004FDF57 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
 		962E341C25929E12004FDF57 /* misc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = misc.cpp; sourceTree = "<group>"; };
 		962E341D25929E12004FDF57 /* tune.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tune.h; sourceTree = "<group>"; };
@@ -169,7 +141,6 @@
 		962E344025929E12004FDF57 /* position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = position.cpp; sourceTree = "<group>"; };
 		962E344125929E12004FDF57 /* uci.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uci.cpp; sourceTree = "<group>"; };
 		962E344225929E12004FDF57 /* endgame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = endgame.cpp; sourceTree = "<group>"; };
-		962E34AC25934492004FDF57 /* nn-82215d0fd0df.nnue */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nn-82215d0fd0df.nnue"; sourceTree = "<group>"; };
 		962E34CA259359D4004FDF57 /* StockfishSendOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockfishSendOutput.h; sourceTree = "<group>"; };
 		962E35B12594EE7E004FDF57 /* Plugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plugin.m; sourceTree = "<group>"; };
 		962E35B52594EEA9004FDF57 /* Plugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
@@ -178,8 +149,12 @@
 		96A9B8032591EE5C00389888 /* Stockfish.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stockfish.cpp; sourceTree = "<group>"; };
 		96A9B8042591EE5C00389888 /* Stockfish.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stockfish.hpp; sourceTree = "<group>"; };
 		96ED1B6440D6672E406C8D19 /* Pods-PluginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PluginTests/Pods-PluginTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C33913C270CAC2400DD322F /* module.mapfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = module.mapfile; sourceTree = "<group>"; };
+		CB2C8203ECD66E5AB2E1D814 /* Pods-CapacitorStockfishVariants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapacitorStockfishVariants.release.xcconfig"; path = "Pods/Target Support Files/Pods-CapacitorStockfishVariants/Pods-CapacitorStockfishVariants.release.xcconfig"; sourceTree = "<group>"; };
+		E4787028A3C62E78C43C1E24 /* Pods_CapacitorStockfishVariantsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CapacitorStockfishVariantsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E523B38ACD543274E2C5E0D4 /* Pods_CapacitorStockfishVariants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CapacitorStockfishVariants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2AB5B1AA2DEBFCADAA709E9 /* Pods-CapacitorStockfishVariants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapacitorStockfishVariants.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CapacitorStockfishVariants/Pods-CapacitorStockfishVariants.debug.xcconfig"; sourceTree = "<group>"; };
 		F65BB2953ECE002E1EF3E424 /* Pods-PluginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PluginTests/Pods-PluginTests.release.xcconfig"; sourceTree = "<group>"; };
-		F6753A823D3815DB436415E3 /* Pods_PluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50ADFFA42020D75100D50D53 /* Capacitor.framework in Frameworks */,
-				03FC29A292ACC40490383A1F /* Pods_Plugin.framework in Frameworks */,
+				DA42435A6CA4E58687BF5D2B /* Pods_CapacitorStockfishVariants.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,8 +171,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50ADFF92201F53D600D50D53 /* Plugin.framework in Frameworks */,
-				20C0B05DCFC8E3958A738AF2 /* Pods_PluginTests.framework in Frameworks */,
+				50ADFF92201F53D600D50D53 /* CapacitorStockfishVariants.framework in Frameworks */,
+				82485E924BAB2B97585F4C01 /* Pods_CapacitorStockfishVariantsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,8 +193,8 @@
 		50ADFF89201F53D600D50D53 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50ADFF88201F53D600D50D53 /* Plugin.framework */,
-				50ADFF91201F53D600D50D53 /* PluginTests.xctest */,
+				50ADFF88201F53D600D50D53 /* CapacitorStockfishVariants.framework */,
+				50ADFF91201F53D600D50D53 /* CapacitorStockfishVariantsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,6 +213,7 @@
 				962E34CA259359D4004FDF57 /* StockfishSendOutput.h */,
 				962E35BB2594EECE004FDF57 /* StockfishBridge.h */,
 				962E35C12594EF0A004FDF57 /* StockfishBridge.mm */,
+				9C33913C270CAC2400DD322F /* module.mapfile */,
 			);
 			path = Plugin;
 			sourceTree = "<group>";
@@ -258,6 +234,10 @@
 				91781294A431A2A7CC6EB714 /* Pods-Plugin.release.xcconfig */,
 				96ED1B6440D6672E406C8D19 /* Pods-PluginTests.debug.xcconfig */,
 				F65BB2953ECE002E1EF3E424 /* Pods-PluginTests.release.xcconfig */,
+				F2AB5B1AA2DEBFCADAA709E9 /* Pods-CapacitorStockfishVariants.debug.xcconfig */,
+				CB2C8203ECD66E5AB2E1D814 /* Pods-CapacitorStockfishVariants.release.xcconfig */,
+				63559E163FCE28E769E784AB /* Pods-CapacitorStockfishVariantsTests.debug.xcconfig */,
+				6D3974C4C935389670597BC5 /* Pods-CapacitorStockfishVariantsTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -292,12 +272,10 @@
 		962E340325929E12004FDF57 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				962E34AC25934492004FDF57 /* nn-82215d0fd0df.nnue */,
 				962E340425929E12004FDF57 /* endgame.h */,
 				962E340525929E12004FDF57 /* thread.cpp */,
 				962E340625929E12004FDF57 /* timeman.cpp */,
 				962E340725929E12004FDF57 /* ucioption.cpp */,
-				962E340825929E12004FDF57 /* nnue */,
 				962E341B25929E12004FDF57 /* types.h */,
 				962E341C25929E12004FDF57 /* misc.cpp */,
 				962E341D25929E12004FDF57 /* tune.h */,
@@ -336,52 +314,6 @@
 			path = src;
 			sourceTree = "<group>";
 		};
-		962E340825929E12004FDF57 /* nnue */ = {
-			isa = PBXGroup;
-			children = (
-				962E340925929E12004FDF57 /* evaluate_nnue.cpp */,
-				962E340A25929E12004FDF57 /* layers */,
-				962E340E25929E12004FDF57 /* nnue_common.h */,
-				962E340F25929E12004FDF57 /* nnue_feature_transformer.h */,
-				962E341025929E12004FDF57 /* features */,
-				962E341625929E12004FDF57 /* evaluate_nnue.h */,
-				962E341725929E12004FDF57 /* architectures */,
-				962E341925929E12004FDF57 /* nnue_accumulator.h */,
-				962E341A25929E12004FDF57 /* nnue_architecture.h */,
-			);
-			path = nnue;
-			sourceTree = "<group>";
-		};
-		962E340A25929E12004FDF57 /* layers */ = {
-			isa = PBXGroup;
-			children = (
-				962E340B25929E12004FDF57 /* affine_transform.h */,
-				962E340C25929E12004FDF57 /* clipped_relu.h */,
-				962E340D25929E12004FDF57 /* input_slice.h */,
-			);
-			path = layers;
-			sourceTree = "<group>";
-		};
-		962E341025929E12004FDF57 /* features */ = {
-			isa = PBXGroup;
-			children = (
-				962E341125929E12004FDF57 /* index_list.h */,
-				962E341225929E12004FDF57 /* features_common.h */,
-				962E341325929E12004FDF57 /* half_kp.h */,
-				962E341425929E12004FDF57 /* half_kp.cpp */,
-				962E341525929E12004FDF57 /* feature_set.h */,
-			);
-			path = features;
-			sourceTree = "<group>";
-		};
-		962E341725929E12004FDF57 /* architectures */ = {
-			isa = PBXGroup;
-			children = (
-				962E341825929E12004FDF57 /* halfkp_256x2-32-32.h */,
-			);
-			path = architectures;
-			sourceTree = "<group>";
-		};
 		962E342825929E12004FDF57 /* syzygy */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,8 +336,8 @@
 			isa = PBXGroup;
 			children = (
 				50ADFFA52020D75100D50D53 /* Capacitor.framework */,
-				3B2A61DA5A1F2DD4F959604D /* Pods_Plugin.framework */,
-				F6753A823D3815DB436415E3 /* Pods_PluginTests.framework */,
+				E523B38ACD543274E2C5E0D4 /* Pods_CapacitorStockfishVariants.framework */,
+				E4787028A3C62E78C43C1E24 /* Pods_CapacitorStockfishVariantsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -428,41 +360,28 @@
 				962E346E25929E12004FDF57 /* tbprobe.h in Headers */,
 				962E347E25929E13004FDF57 /* tt.h in Headers */,
 				962E347425929E13004FDF57 /* thread_win32_osx.h in Headers */,
-				962E345C25929E12004FDF57 /* evaluate_nnue.h in Headers */,
-				962E345825929E12004FDF57 /* features_common.h in Headers */,
 				962E347525929E13004FDF57 /* movepick.h in Headers */,
 				962E346C25929E12004FDF57 /* pawns.h in Headers */,
-				962E345E25929E12004FDF57 /* nnue_accumulator.h in Headers */,
-				962E345425929E12004FDF57 /* input_slice.h in Headers */,
-				962E345625929E12004FDF57 /* nnue_feature_transformer.h in Headers */,
-				962E345F25929E12004FDF57 /* nnue_architecture.h in Headers */,
-				962E345725929E12004FDF57 /* index_list.h in Headers */,
 				962E346325929E12004FDF57 /* misc.h in Headers */,
 				962E320D25924CED004FDF57 /* threadbuf.h in Headers */,
 				962E347D25929E13004FDF57 /* search.h in Headers */,
 				962E346025929E12004FDF57 /* types.h in Headers */,
 				96A9B8062591EE5C00389888 /* Stockfish.hpp in Headers */,
-				962E345225929E12004FDF57 /* affine_transform.h in Headers */,
 				962E35BC2594EECE004FDF57 /* StockfishBridge.h in Headers */,
 				962E348225929E13004FDF57 /* timeman.h in Headers */,
 				962E346A25929E12004FDF57 /* bitboard.h in Headers */,
 				962E347A25929E13004FDF57 /* incbin.h in Headers */,
-				962E345D25929E12004FDF57 /* halfkp_256x2-32-32.h in Headers */,
-				962E345925929E12004FDF57 /* half_kp.h in Headers */,
-				962E345525929E12004FDF57 /* nnue_common.h in Headers */,
 				962E348125929E13004FDF57 /* position.h in Headers */,
 				962E344D25929E12004FDF57 /* endgame.h in Headers */,
-				962E345B25929E12004FDF57 /* feature_set.h in Headers */,
-				962E345325929E12004FDF57 /* clipped_relu.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		50ADFF87201F53D600D50D53 /* Plugin */ = {
+		50ADFF87201F53D600D50D53 /* CapacitorStockfishVariants */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50ADFF9C201F53D600D50D53 /* Build configuration list for PBXNativeTarget "Plugin" */;
+			buildConfigurationList = 50ADFF9C201F53D600D50D53 /* Build configuration list for PBXNativeTarget "CapacitorStockfishVariants" */;
 			buildPhases = (
 				AB5B3E54B4E897F32C2279DA /* [CP] Check Pods Manifest.lock */,
 				50ADFF83201F53D600D50D53 /* Sources */,
@@ -474,14 +393,14 @@
 			);
 			dependencies = (
 			);
-			name = Plugin;
+			name = CapacitorStockfishVariants;
 			productName = Plugin;
-			productReference = 50ADFF88201F53D600D50D53 /* Plugin.framework */;
+			productReference = 50ADFF88201F53D600D50D53 /* CapacitorStockfishVariants.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		50ADFF90201F53D600D50D53 /* PluginTests */ = {
+		50ADFF90201F53D600D50D53 /* CapacitorStockfishVariantsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50ADFF9F201F53D600D50D53 /* Build configuration list for PBXNativeTarget "PluginTests" */;
+			buildConfigurationList = 50ADFF9F201F53D600D50D53 /* Build configuration list for PBXNativeTarget "CapacitorStockfishVariantsTests" */;
 			buildPhases = (
 				0596884F929ED6F1DE134961 /* [CP] Check Pods Manifest.lock */,
 				50ADFF8D201F53D600D50D53 /* Sources */,
@@ -494,9 +413,9 @@
 			dependencies = (
 				50ADFF94201F53D600D50D53 /* PBXTargetDependency */,
 			);
-			name = PluginTests;
+			name = CapacitorStockfishVariantsTests;
 			productName = PluginTests;
-			productReference = 50ADFF91201F53D600D50D53 /* PluginTests.xctest */;
+			productReference = 50ADFF91201F53D600D50D53 /* CapacitorStockfishVariantsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -521,7 +440,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 50ADFF82201F53D600D50D53 /* Build configuration list for PBXProject "Plugin" */;
+			buildConfigurationList = 50ADFF82201F53D600D50D53 /* Build configuration list for PBXProject "CapacitorStockfishVariants" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -533,8 +452,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50ADFF87201F53D600D50D53 /* Plugin */,
-				50ADFF90201F53D600D50D53 /* PluginTests */,
+				50ADFF87201F53D600D50D53 /* CapacitorStockfishVariants */,
+				50ADFF90201F53D600D50D53 /* CapacitorStockfishVariantsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -547,6 +466,7 @@
 				962E344525929E12004FDF57 /* Top CPU Contributors.txt in Resources */,
 				962E344325929E12004FDF57 /* Copying.txt in Resources */,
 				962E344425929E12004FDF57 /* AUTHORS in Resources */,
+				9C33913D270CAC2400DD322F /* module.mapfile in Resources */,
 				962E347925929E13004FDF57 /* UNLICENCE in Resources */,
 				962E344A25929E12004FDF57 /* README.md in Resources */,
 			);
@@ -573,7 +493,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PluginTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CapacitorStockfishVariantsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -591,7 +511,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Plugin-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CapacitorStockfishVariants-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -604,7 +524,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PluginTests/Pods-PluginTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CapacitorStockfishVariantsTests/Pods-CapacitorStockfishVariantsTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Capacitor/Capacitor.framework",
 				"${BUILT_PRODUCTS_DIR}/CapacitorCordova/Cordova.framework",
 			);
@@ -615,7 +535,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PluginTests/Pods-PluginTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CapacitorStockfishVariantsTests/Pods-CapacitorStockfishVariantsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -648,8 +568,6 @@
 				962E35B22594EE7E004FDF57 /* Plugin.m in Sources */,
 				962E344F25929E12004FDF57 /* timeman.cpp in Sources */,
 				962E346825929E12004FDF57 /* benchmark.cpp in Sources */,
-				962E345125929E12004FDF57 /* evaluate_nnue.cpp in Sources */,
-				962E345A25929E12004FDF57 /* half_kp.cpp in Sources */,
 				962E344E25929E12004FDF57 /* thread.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,7 +585,7 @@
 /* Begin PBXTargetDependency section */
 		50ADFF94201F53D600D50D53 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 50ADFF87201F53D600D50D53 /* Plugin */;
+			target = 50ADFF87201F53D600D50D53 /* CapacitorStockfishVariants */;
 			targetProxy = 50ADFF93201F53D600D50D53 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -706,6 +624,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -715,6 +634,13 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					KOTH,
+					THREECHECK,
+					ATOMIC,
+					HORDE,
+					RACE,
+					ANTI,
+					CRAZYHOUSE,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -723,8 +649,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Plugin/module.mapfile;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-import-underlying-module";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -766,6 +696,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -777,7 +708,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Plugin/module.mapfile;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-import-underlying-module";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -788,7 +723,7 @@
 		};
 		50ADFF9D201F53D600D50D53 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E23F77F099397094342571A /* Pods-Plugin.debug.xcconfig */;
+			baseConfigurationReference = F2AB5B1AA2DEBFCADAA709E9 /* Pods-CapacitorStockfishVariants.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
@@ -822,7 +757,7 @@
 		};
 		50ADFF9E201F53D600D50D53 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91781294A431A2A7CC6EB714 /* Pods-Plugin.release.xcconfig */;
+			baseConfigurationReference = CB2C8203ECD66E5AB2E1D814 /* Pods-CapacitorStockfishVariants.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
@@ -855,7 +790,7 @@
 		};
 		50ADFFA0201F53D600D50D53 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96ED1B6440D6672E406C8D19 /* Pods-PluginTests.debug.xcconfig */;
+			baseConfigurationReference = 63559E163FCE28E769E784AB /* Pods-CapacitorStockfishVariantsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -870,7 +805,7 @@
 		};
 		50ADFFA1201F53D600D50D53 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F65BB2953ECE002E1EF3E424 /* Pods-PluginTests.release.xcconfig */;
+			baseConfigurationReference = 6D3974C4C935389670597BC5 /* Pods-CapacitorStockfishVariantsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -886,7 +821,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50ADFF82201F53D600D50D53 /* Build configuration list for PBXProject "Plugin" */ = {
+		50ADFF82201F53D600D50D53 /* Build configuration list for PBXProject "CapacitorStockfishVariants" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50ADFF9A201F53D600D50D53 /* Debug */,
@@ -895,7 +830,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50ADFF9C201F53D600D50D53 /* Build configuration list for PBXNativeTarget "Plugin" */ = {
+		50ADFF9C201F53D600D50D53 /* Build configuration list for PBXNativeTarget "CapacitorStockfishVariants" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50ADFF9D201F53D600D50D53 /* Debug */,
@@ -904,7 +839,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50ADFF9F201F53D600D50D53 /* Build configuration list for PBXNativeTarget "PluginTests" */ = {
+		50ADFF9F201F53D600D50D53 /* Build configuration list for PBXNativeTarget "CapacitorStockfishVariantsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50ADFFA0201F53D600D50D53 /* Debug */,

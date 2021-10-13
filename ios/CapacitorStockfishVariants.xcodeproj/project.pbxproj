@@ -725,6 +725,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F2AB5B1AA2DEBFCADAA709E9 /* Pods-CapacitorStockfishVariants.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -739,9 +740,23 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)\n$(FRAMEWORK_SEARCH_PATHS)\n$(FRAMEWORK_SEARCH_PATHS)";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
+					"-fmodules",
+					"-fcxx-modules",
+					"-fno-exceptions",
+					"-std=c++17",
 					"-DUSE_PTHREADS",
-					"-mpopcnt",
+					"-DKOTH",
+					"-DTHREECHECK",
+					"-DATOMIC",
+					"-DHORDE",
+					"-DRACE",
+					"-DANTI",
+					"-DCRAZYHOUSE",
+					"-DNDEBUG",
+					"-O3",
+					"-DIS_64BIT",
 					"-DUSE_POPCNT",
+					"-flto=thin",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.getcapacitor.Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -759,6 +774,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB2C8203ECD66E5AB2E1D814 /* Pods-CapacitorStockfishVariants.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -773,9 +789,23 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CPLUSPLUSFLAGS = (
+					"-fmodules",
+					"-fcxx-modules",
+					"-fno-exceptions",
+					"-std=c++17",
 					"-DUSE_PTHREADS",
-					"-mpopcnt",
+					"-DKOTH",
+					"-DTHREECHECK",
+					"-DATOMIC",
+					"-DHORDE",
+					"-DRACE",
+					"-DANTI",
+					"-DCRAZYHOUSE",
+					"-DNDEBUG",
+					"-O3",
+					"-DIS_64BIT",
 					"-DUSE_POPCNT",
+					"-flto=thin",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.getcapacitor.Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

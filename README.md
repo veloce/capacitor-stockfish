@@ -3,6 +3,11 @@
 [Stockfish](https://stockfishchess.org/) chess engine interface for Ionic
 Capacitor.
 
+## Example usage
+
+- https://github.com/veloce/lichobile/blob/master/src/stockfish.ts
+- https://github.com/veloce/lichobile/blob/master/src/ui/analyse/ceval/StockfishClient.ts
+
 ## API
 
 <docgen-index>
@@ -89,9 +94,3 @@ Stops the engine.
 --------------------
 
 </docgen-api>
-
-## Example usage
-
-- https://github.com/veloce/lichobile/blob/master/src/stockfish.ts
-- https://github.com/veloce/lichobile/blob/master/src/ui/analyse/ceval/StockfishClient.ts
-

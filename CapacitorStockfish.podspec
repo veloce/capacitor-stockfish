@@ -17,9 +17,12 @@ Pod::Spec.new do |s|
   s.ios.deployment_target  = '12.0'
   s.dependency 'Capacitor'
   s.swift_version = '5.1'
+  s.compiler_flags = '-fmodules -fcxx-modules'
   s.xcconfig = {
+    'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
     'CLANG_CXX_LANGUAGE_STANDARD' => 'gnu++17',
     'CLANG_CXX_LIBRARY' => 'libc++',
-    'OTHER_CPLUSPLUSFLAGS' => '-DNNUE_EMBEDDING_OFF -DIS_64BIT -DUSE_PTHREADS -DUSE_POPCNT'
+    'OTHER_CPLUSPLUSFLAGS' => '-fno-exceptions -std=c++17 -DUSE_PTHREADS -DNNUE_EMBEDDING_OFF -DKOTH -DTHREECHECK -DATOMIC -DHORDE -DRACE -DANTI -DCRAZYHOUSE -DNDEBUG -O3 -DIS_64BIT -DUSE_POPCNT -flto=thin',
+    'OTHER_LDFLAGS' => '-fno-exceptions -std=c++17 -DUSE_PTHREADS -DNNUE_EMBEDDING_OFF -DKOTH -DTHREECHECK -DATOMIC -DHORDE -DRACE -DANTI -DCRAZYHOUSE -DNDEBUG -O3 -DIS_64BIT -DUSE_POPCNT -flto=thin'
   }
 end

@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03FC29A292ACC40490383A1F /* Pods_Plugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2A61DA5A1F2DD4F959604D /* Pods_Plugin.framework */; };
-		20C0B05DCFC8E3958A738AF2 /* Pods_PluginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6753A823D3815DB436415E3 /* Pods_PluginTests.framework */; };
 		50ADFF92201F53D600D50D53 /* CapacitorStockfishVariants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADFF88201F53D600D50D53 /* CapacitorStockfishVariants.framework */; };
 		50ADFF97201F53D600D50D53 /* PluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ADFF96201F53D600D50D53 /* PluginTests.swift */; };
 		50ADFF99201F53D600D50D53 /* Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 50ADFF8B201F53D600D50D53 /* Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50ADFFA42020D75100D50D53 /* Capacitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50ADFFA52020D75100D50D53 /* Capacitor.framework */; };
+		82485E924BAB2B97585F4C01 /* Pods_CapacitorStockfishVariantsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4787028A3C62E78C43C1E24 /* Pods_CapacitorStockfishVariantsTests.framework */; };
 		962E320D25924CED004FDF57 /* threadbuf.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E320C25924CED004FDF57 /* threadbuf.h */; };
 		962E344325929E12004FDF57 /* Copying.txt in Resources */ = {isa = PBXBuildFile; fileRef = 962E33F825929E12004FDF57 /* Copying.txt */; };
 		962E344425929E12004FDF57 /* AUTHORS in Resources */ = {isa = PBXBuildFile; fileRef = 962E33F925929E12004FDF57 /* AUTHORS */; };
@@ -66,6 +65,7 @@
 		96A9B8052591EE5C00389888 /* Stockfish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96A9B8032591EE5C00389888 /* Stockfish.cpp */; };
 		96A9B8062591EE5C00389888 /* Stockfish.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 96A9B8042591EE5C00389888 /* Stockfish.hpp */; };
 		9C33913D270CAC2400DD322F /* module.mapfile in Resources */ = {isa = PBXBuildFile; fileRef = 9C33913C270CAC2400DD322F /* module.mapfile */; };
+		DA42435A6CA4E58687BF5D2B /* Pods_CapacitorStockfishVariants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E523B38ACD543274E2C5E0D4 /* Pods_CapacitorStockfishVariants.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +79,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B2A61DA5A1F2DD4F959604D /* Pods_Plugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50ADFF88201F53D600D50D53 /* CapacitorStockfishVariants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CapacitorStockfishVariants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50ADFF8B201F53D600D50D53 /* Plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plugin.h; sourceTree = "<group>"; };
 		50ADFF8C201F53D600D50D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +87,8 @@
 		50ADFF98201F53D600D50D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50ADFFA52020D75100D50D53 /* Capacitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capacitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E23F77F099397094342571A /* Pods-Plugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plugin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plugin/Pods-Plugin.debug.xcconfig"; sourceTree = "<group>"; };
+		63559E163FCE28E769E784AB /* Pods-CapacitorStockfishVariantsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapacitorStockfishVariantsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CapacitorStockfishVariantsTests/Pods-CapacitorStockfishVariantsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D3974C4C935389670597BC5 /* Pods-CapacitorStockfishVariantsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapacitorStockfishVariantsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CapacitorStockfishVariantsTests/Pods-CapacitorStockfishVariantsTests.release.xcconfig"; sourceTree = "<group>"; };
 		91781294A431A2A7CC6EB714 /* Pods-Plugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plugin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plugin/Pods-Plugin.release.xcconfig"; sourceTree = "<group>"; };
 		962E320C25924CED004FDF57 /* threadbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = threadbuf.h; path = ../../lib/threadbuf.h; sourceTree = "<group>"; };
 		962E33F825929E12004FDF57 /* Copying.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Copying.txt; sourceTree = "<group>"; };
@@ -149,8 +150,11 @@
 		96A9B8042591EE5C00389888 /* Stockfish.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stockfish.hpp; sourceTree = "<group>"; };
 		96ED1B6440D6672E406C8D19 /* Pods-PluginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PluginTests/Pods-PluginTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C33913C270CAC2400DD322F /* module.mapfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = module.mapfile; sourceTree = "<group>"; };
+		CB2C8203ECD66E5AB2E1D814 /* Pods-CapacitorStockfishVariants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapacitorStockfishVariants.release.xcconfig"; path = "Pods/Target Support Files/Pods-CapacitorStockfishVariants/Pods-CapacitorStockfishVariants.release.xcconfig"; sourceTree = "<group>"; };
+		E4787028A3C62E78C43C1E24 /* Pods_CapacitorStockfishVariantsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CapacitorStockfishVariantsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E523B38ACD543274E2C5E0D4 /* Pods_CapacitorStockfishVariants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CapacitorStockfishVariants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2AB5B1AA2DEBFCADAA709E9 /* Pods-CapacitorStockfishVariants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapacitorStockfishVariants.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CapacitorStockfishVariants/Pods-CapacitorStockfishVariants.debug.xcconfig"; sourceTree = "<group>"; };
 		F65BB2953ECE002E1EF3E424 /* Pods-PluginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PluginTests/Pods-PluginTests.release.xcconfig"; sourceTree = "<group>"; };
-		F6753A823D3815DB436415E3 /* Pods_PluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50ADFFA42020D75100D50D53 /* Capacitor.framework in Frameworks */,
-				03FC29A292ACC40490383A1F /* Pods_Plugin.framework in Frameworks */,
+				DA42435A6CA4E58687BF5D2B /* Pods_CapacitorStockfishVariants.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50ADFF92201F53D600D50D53 /* CapacitorStockfishVariants.framework in Frameworks */,
-				20C0B05DCFC8E3958A738AF2 /* Pods_PluginTests.framework in Frameworks */,
+				82485E924BAB2B97585F4C01 /* Pods_CapacitorStockfishVariantsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +234,10 @@
 				91781294A431A2A7CC6EB714 /* Pods-Plugin.release.xcconfig */,
 				96ED1B6440D6672E406C8D19 /* Pods-PluginTests.debug.xcconfig */,
 				F65BB2953ECE002E1EF3E424 /* Pods-PluginTests.release.xcconfig */,
+				F2AB5B1AA2DEBFCADAA709E9 /* Pods-CapacitorStockfishVariants.debug.xcconfig */,
+				CB2C8203ECD66E5AB2E1D814 /* Pods-CapacitorStockfishVariants.release.xcconfig */,
+				63559E163FCE28E769E784AB /* Pods-CapacitorStockfishVariantsTests.debug.xcconfig */,
+				6D3974C4C935389670597BC5 /* Pods-CapacitorStockfishVariantsTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -328,8 +336,8 @@
 			isa = PBXGroup;
 			children = (
 				50ADFFA52020D75100D50D53 /* Capacitor.framework */,
-				3B2A61DA5A1F2DD4F959604D /* Pods_Plugin.framework */,
-				F6753A823D3815DB436415E3 /* Pods_PluginTests.framework */,
+				E523B38ACD543274E2C5E0D4 /* Pods_CapacitorStockfishVariants.framework */,
+				E4787028A3C62E78C43C1E24 /* Pods_CapacitorStockfishVariantsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -485,7 +493,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PluginTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CapacitorStockfishVariantsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -503,7 +511,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Plugin-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CapacitorStockfishVariants-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -516,7 +524,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PluginTests/Pods-PluginTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CapacitorStockfishVariantsTests/Pods-CapacitorStockfishVariantsTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Capacitor/Capacitor.framework",
 				"${BUILT_PRODUCTS_DIR}/CapacitorCordova/Cordova.framework",
 			);
@@ -527,7 +535,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PluginTests/Pods-PluginTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CapacitorStockfishVariantsTests/Pods-CapacitorStockfishVariantsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -715,7 +723,7 @@
 		};
 		50ADFF9D201F53D600D50D53 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E23F77F099397094342571A /* Pods-Plugin.debug.xcconfig */;
+			baseConfigurationReference = F2AB5B1AA2DEBFCADAA709E9 /* Pods-CapacitorStockfishVariants.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
@@ -749,7 +757,7 @@
 		};
 		50ADFF9E201F53D600D50D53 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91781294A431A2A7CC6EB714 /* Pods-Plugin.release.xcconfig */;
+			baseConfigurationReference = CB2C8203ECD66E5AB2E1D814 /* Pods-CapacitorStockfishVariants.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
@@ -782,7 +790,7 @@
 		};
 		50ADFFA0201F53D600D50D53 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96ED1B6440D6672E406C8D19 /* Pods-PluginTests.debug.xcconfig */;
+			baseConfigurationReference = 63559E163FCE28E769E784AB /* Pods-CapacitorStockfishVariantsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -797,7 +805,7 @@
 		};
 		50ADFFA1201F53D600D50D53 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F65BB2953ECE002E1EF3E424 /* Pods-PluginTests.release.xcconfig */;
+			baseConfigurationReference = 6D3974C4C935389670597BC5 /* Pods-CapacitorStockfishVariantsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

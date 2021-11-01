@@ -59,6 +59,14 @@ typedef bool(*fun3_t)(HANDLE, CONST GROUP_AFFINITY*, PGROUP_AFFINITY);
 #include "misc.h"
 #include "thread.h"
 
+#ifdef _WIN32
+#include <direct.h>
+#define GETCWD _getcwd
+#else
+#include <unistd.h>
+#define GETCWD getcwd
+#endif
+
 using namespace std;
 
 namespace Stockfish {
@@ -593,13 +601,6 @@ void bindThisThread(size_t idx) {
 
 } // namespace WinProcGroup
 
-#ifdef _WIN32
-#include <direct.h>
-#define GETCWD _getcwd
-#else
-#include <unistd.h>
-#define GETCWD getcwd
-#endif
 
 namespace CommandLine {
 

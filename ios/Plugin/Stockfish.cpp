@@ -2,6 +2,7 @@
 #include "bitboard.h"
 #include "endgame.h"
 #include "position.h"
+#include "psqt.h"
 #include "search.h"
 #include "thread.h"
 #include "tt.h"
@@ -11,12 +12,10 @@
 #include "Stockfish.hpp"
 #include "StockfishSendOutput.h"
 
-namespace PSQT {
-  void init();
-}
 
 namespace CapacitorStockfish
 {
+  using namespace Stockfish;
   static std::string CMD_EXIT = "stockfish:exit";
 
   auto readstdout = [](void *bridge) {

@@ -17,7 +17,6 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    defaultPublishConfig "withoutNNUEDebug"
     ndkVersion '21.3.6528147'
     compileSdkVersion project.hasProperty('compileSdkVersion') ? rootProject.ext.compileSdkVersion : 30
     defaultConfig {
@@ -26,6 +25,14 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+        externalNativeBuild {
+            ndkBuild {
+                cppFlags '-std=c++17', '-DUSE_PTHREADS', '-DNDEBUG', '-O3', '-DIS_64BIT', '-DUSE_POPCNT', '-DUSE_NEON'
+            }
+        }
     }
     externalNativeBuild {
         ndkBuild {
@@ -40,31 +47,6 @@ android {
     }
     lintOptions {
         abortOnError false
-    }
-    flavorDimensions 'nnue'
-    productFlavors {
-        withoutNNUE {
-            dimension 'nnue'
-            ndk {
-                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
-            }
-            externalNativeBuild {
-                ndkBuild {
-                    cppFlags '-std=c++17', '-DUSE_PTHREADS', '-DNDEBUG', '-O3', '-DNNUE_EMBEDDING_OFF'
-                }
-            }
-        }
-        withNNUE {
-            dimension 'nnue'
-            ndk {
-                abiFilters 'arm64-v8a'
-            }
-            externalNativeBuild {
-                ndkBuild {
-                    cppFlags '-std=c++17', '-DUSE_PTHREADS', '-DNDEBUG', '-O3', '-DIS_64BIT', '-DUSE_POPCNT', '-DUSE_NEON'
-                }
-            }
-        }
     }
 }
 

@@ -27,8 +27,13 @@ public final class Stockfish extends Plugin {
     Executors.newScheduledThreadPool(1);
   private ScheduledFuture<?> stopOnPauseHandle;
 
+  private static boolean supportedArch = true;
   static {
-    System.loadLibrary("stockfish");
+    try {
+      System.loadLibrary("stockfish");
+    } catch (java.lang.UnsatisfiedLinkError e) {
+      supportedArch = false;
+    }
   }
 
   // JNI
@@ -71,7 +76,7 @@ public final class Stockfish extends Plugin {
 
   @PluginMethod
   public void start(PluginCall call) {
-    if (!isInit) {
+    if (supportedArch && !isInit) {
       jniInit();
       isInit = true;
     }

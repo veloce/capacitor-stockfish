@@ -9,7 +9,7 @@ LOCAL_SRC_FILES := \
 	../../stockfish/src/timeman.cpp \
 	../../stockfish/src/ucioption.cpp \
 	../../stockfish/src/nnue/evaluate_nnue.cpp \
-	../../stockfish/src/nnue/features/half_kp.cpp \
+	../../stockfish/src/nnue/features/half_ka_v2_hm.cpp \
 	../../stockfish/src/misc.cpp \
 	../../stockfish/src/bitboard.cpp \
 	../../stockfish/src/psqt.cpp \

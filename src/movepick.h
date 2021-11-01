@@ -27,6 +27,8 @@
 #include "position.h"
 #include "types.h"
 
+namespace Stockfish {
+
 /// StatsEntry stores the stat table value. It is usually a number but could
 /// be a move or even a nested history. We use a class instead of naked value
 /// to directly call history update operator<<() on the entry so to use stats
@@ -84,11 +86,11 @@ enum StatsType { NoCaptures, Captures };
 /// unsuccessful during the current search, and is used for reduction and move
 /// ordering decisions. It uses 2 tables (one for each color) indexed by
 /// the move's from and to squares, see www.chessprogramming.org/Butterfly_Boards
-typedef Stats<int16_t, 13365, COLOR_NB, int(SQUARE_NB) * int(SQUARE_NB)> ButterflyHistory;
+typedef Stats<int16_t, 14365, COLOR_NB, int(SQUARE_NB) * int(SQUARE_NB)> ButterflyHistory;
 
 /// At higher depths LowPlyHistory records successful quiet moves near the root
-/// and quiet moves which are/were in the PV (ttPv). It is cleared with each new
-/// search and filled during iterative deepening.
+/// and quiet moves which are/were in the PV (ttPv). LowPlyHistory is populated during
+/// iterative deepening and at each new search the data is shifted down by 2 plies
 constexpr int MAX_LPH = 4;
 typedef Stats<int16_t, 10692, MAX_LPH, int(SQUARE_NB) * int(SQUARE_NB)> LowPlyHistory;
 
@@ -155,5 +157,7 @@ private:
   int ply;
   ExtMove moves[MAX_MOVES];
 };
+
+} // namespace Stockfish
 
 #endif // #ifndef MOVEPICK_H_INCLUDED

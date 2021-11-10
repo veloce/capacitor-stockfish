@@ -59,10 +59,9 @@ namespace CapacitorStockfish
     Endgames::init();
     Threads.set(size_t(Options["Threads"]));
     Search::clear(); // After threads are up
-#ifdef USE_NNUE
+#ifndef NNUE_EMBEDDING_OFF
     Eval::NNUE::init();
 #endif
-
   }
 
   void cmd(std::string cmd) {

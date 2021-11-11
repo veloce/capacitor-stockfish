@@ -1,22 +1,21 @@
 #include <iostream>
-#include "bitboard.h"
-#include "endgame.h"
-#include "position.h"
-#include "search.h"
-#include "thread.h"
-#include "tt.h"
-#include "uci.h"
-#include "tbprobe.h"
-#include "threadbuf.h"
+#include "../../stockfish/src/bitboard.h"
+#include "../../stockfish/src/endgame.h"
+#include "../../stockfish/src/position.h"
+#include "../../stockfish/src/psqt.h"
+#include "../../stockfish/src/search.h"
+#include "../../stockfish/src/thread.h"
+#include "../../stockfish/src/tt.h"
+#include "../../stockfish/src/uci.h"
+#include "../../stockfish/src/syzygy/tbprobe.h"
+#include "../../lib/threadbuf.h"
 #include "Stockfish.hpp"
 #include "StockfishSendOutput.h"
 
-namespace PSQT {
-  void init();
-}
 
 namespace CapacitorStockfish
 {
+  using namespace Stockfish;
   static std::string CMD_EXIT = "stockfish:exit";
 
   auto readstdout = [](void *bridge) {
@@ -60,10 +59,9 @@ namespace CapacitorStockfish
     Endgames::init();
     Threads.set(size_t(Options["Threads"]));
     Search::clear(); // After threads are up
-#ifdef USE_NNUE
+#ifndef NNUE_EMBEDDING_OFF
     Eval::NNUE::init();
 #endif
-
   }
 
   void cmd(std::string cmd) {

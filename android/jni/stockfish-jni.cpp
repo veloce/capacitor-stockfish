@@ -4,12 +4,15 @@
 #include "bitboard.h"
 #include "endgame.h"
 #include "position.h"
+#include "psqt.h"
 #include "search.h"
+#include "syzygy/tbprobe.h"
 #include "thread.h"
 #include "tt.h"
 #include "uci.h"
-#include "syzygy/tbprobe.h"
 #include "threadbuf.h"
+
+using namespace Stockfish;
 
 #define LOGD(TAG,...) __android_log_print(ANDROID_LOG_DEBUG  , TAG,__VA_ARGS__)
 
@@ -24,10 +27,6 @@ static jobject jobj;
 static jmethodID onMessage;
 
 static std::string CMD_EXIT = "stockfish:exit";
-
-namespace PSQT {
-  void init();
-}
 
 auto readstdout = []() {
   JNIEnv *jenv;

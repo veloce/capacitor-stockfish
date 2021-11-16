@@ -17,7 +17,7 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    ndkVersion '21.3.6528147'
+    ndkVersion '23.1.7779620'
     compileSdkVersion project.hasProperty('compileSdkVersion') ? rootProject.ext.compileSdkVersion : 30
     defaultConfig {
         minSdkVersion project.hasProperty('minSdkVersion') ? rootProject.ext.minSdkVersion : 21

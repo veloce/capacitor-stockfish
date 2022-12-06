@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target  = '12.0'
   s.dependency 'Capacitor'
   s.swift_version = '5.1'
-  s.compiler_flags = '-fmodules -fcxx-modules'
+  s.compiler_flags = '-fmodules -fcxx-modules -DNNUE_EMBEDDING_OFF'
   s.xcconfig = {
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
     'CLANG_CXX_LANGUAGE_STANDARD' => 'gnu++17',

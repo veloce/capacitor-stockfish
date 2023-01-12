@@ -85,6 +85,11 @@ public final class Stockfish extends Plugin {
 
   @PluginMethod
   public void cmd(PluginCall call) {
+    if (!supportedArch){
+      call.error("Arch not supported.");
+      return;
+    }
+
     if (isInit) {
       String cmd = call.getString("cmd");
       if (cmd == null) {
